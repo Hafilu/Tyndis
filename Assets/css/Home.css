@@ -226,7 +226,7 @@ html {
 
 /* story section */
 .story-container {
-  background: url("/Assets/storybg.png") no-repeat;
+  background: url("../storybg.png") no-repeat;
   background-size: contain; /* Ensure image fits the specified dimensions */
   z-index: 0; /* Place behind the content */
 }
@@ -293,7 +293,7 @@ html {
   right: 50px;
   width: 120px;
   height: 400px;
-  background: url("/Assets/packagrbg.png") no-repeat;
+  background: url("../packagrbg.png") no-repeat;
   background-size: contain; /* Ensure image fits the specified dimensions */
   opacity: 0.3; /* Control transparency of the image */
   z-index: 0; /* Place behind the content */
@@ -439,7 +439,7 @@ html {
   left: 50px;
   width: 120px;
   height: 150px;
-  background: url("/Assets/expbg.png") no-repeat;
+  background: url("../expbg.png") no-repeat;
   background-size: contain; /* Ensure image fits the specified dimensions */
   opacity: 0.3; /* Control transparency of the image */
   z-index: 0; /* Place behind the content */
@@ -560,7 +560,7 @@ html {
 
 
 .sts1-container {
-  background: url("/Assets/status1bg.png") no-repeat;
+  background: url("../status1bg.png") no-repeat;
   background-position: center;
   background-color: rgba(242, 238, 226, 0.9);
   background-size: cover; /* Ensure image fits the specified dimensions */
@@ -630,7 +630,7 @@ html {
   left: 50px;
   width: 400px;
   height: 300px;
-  background: url("/Assets/discoverbg.png") no-repeat;
+  background: url("../discoverbg.png") no-repeat;
   background-size: contain; /* Ensure image fits the specified dimensions */
   opacity: 1; /* Control transparency of the image */
   z-index: 0; /* Place behind the content */
@@ -730,7 +730,7 @@ html {
   right: 50px;
   width: 400px;
   height: 300px;
-  background: url("/Assets/monkbg.png") no-repeat;
+  background: url("../monkbg.png") no-repeat;
   background-size: contain; /* Ensure image fits the specified dimensions */
   opacity: 1; /* Control transparency of the image */
   z-index: 0; /* Place behind the content */
@@ -751,7 +751,7 @@ html {
 
 .monk-card {
   background-color: rgba(248, 248, 248, 1);
-  background-image: url("/Assets/monkbg2.png");
+  background-image: url("../monkbg2.png");
   background-repeat: no-repeat;
   background-position: left;
   background-size: 400px;
@@ -882,7 +882,7 @@ html {
   left: 10px;
   width: 200px;
   height: 200px;
-  background: url("/Assets/effortbg1.png") no-repeat;
+  background: url("../effortbg1.png") no-repeat;
   background-size: cover; /* Ensure image fits the specified dimensions */
   opacity: 1; /* Control transparency of the image */
   z-index: 0; /* Place behind the content */
@@ -993,7 +993,7 @@ html {
 
 
 .sts2-container {
-  background: url("/Assets/stsbg2.png") no-repeat;
+  background: url("../stsbg2.png") no-repeat;
   background-position: center;
   background-color: rgba(242, 238, 226, 0.9);
   background-size: contain; /* Ensure image fits the specified dimensions */
@@ -1115,7 +1115,7 @@ html {
       rgba(23, 25, 31, 0.1),
       rgba(23, 25, 31, 0.1)
     ),
-    /* Overlay */ url("/Assets/subbg.png") no-repeat center/cover; /* Background image */
+    /* Overlay */ url("../subbg.png") no-repeat center/cover; /* Background image */
   color: white; /* Adjust text color to contrast with overlay */
   display: flex;
   flex-direction: column;
@@ -1326,7 +1326,7 @@ html {
   left: 0%;
   right: inherit;
   background-size: cover;
-  background-image: url("/Assets/expPrev.png");
+  background-image: url("../expPrev.png");
 }
 .landing-Sliders .slick-next {
   top: 40%;
@@ -1334,7 +1334,7 @@ html {
   right: -30px;
   left: inherit;
   background-size: cover;
-  background-image: url("/Assets/expNext.png");
+  background-image: url("../expNext.png");
 }
 
 /*blog slider */
@@ -1377,7 +1377,7 @@ html {
   left: 96%;
   right: inherit;
   background-size: cover;
-  background-image: url("/Assets/expPrev.png");
+  background-image: url("../expPrev.png");
 }
 .blog-Sliders .slick-next {
   top: -30px;
@@ -1385,7 +1385,7 @@ html {
   right: -15px;
   left: inherit;
   background-size: cover;
-  background-image: url("/Assets/expNext.png");
+  background-image: url("../expNext.png");
 }
 @media only screen and (max-width: 992px) {
   .blog-Sliders .slick-prev {

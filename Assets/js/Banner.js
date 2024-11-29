@@ -39,9 +39,9 @@ const heroData = [
 
 const videoSrc = "/Assets/video1.mp4"; // Video file
 const imageSrcs = [
-  "/Assets/banner.jpeg",
-  "/Assets/banner.jpeg",
-  "/Assets/banner.jpeg",
+  "./Assets/banner.jpeg",
+  "./Assets/banner.jpeg",
+  "./Assets/banner.jpeg",
   
 ]; // Image files
 
