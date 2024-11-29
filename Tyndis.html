@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <link rel="stylesheet" href="./Assets/css/Home.css" />
+    <title>Hero and Background</title>
+  </head>
+  <body>
+    <div>
+      <!-- banner section -->
+      <section>
+        <div class="container">
+          <!-- Navbar -->
+          <div class="navbar">
+            <div class="logo">LOGO</div>
+            <div class="hamburger" id="hamburger">
+              <p class="lang"><span>FR</span>/EN</p>
+              <img src="./Assets/menu.png" />
+            </div>
+          </div>
+
+          <!-- Backdrop -->
+          <div class="backdrop" id="backdrop"></div>
+
+          <!-- Drawer -->
+          <div class="drawer" id="drawer">
+            <div class="header"><span id="close">X</span> Drawer Header</div>
+            <div class="content">This is the drawer content.</div>
+            <div class="footer">Drawer Footer</div>
+          </div>
+
+          <!-- Background -->
+          <div class="bg fade-in" id="background"></div>
+
+          <!-- Hero -->
+          <div class="hero">
+            <div class="hero-text" id="heroContent">
+              <p id="heroText1">Welcome</p>
+              <p id="heroText2">to hf land</p>
+            </div>
+            <div class="controls">
+              <div class="dots">
+                <div class="dot" data-index="0"></div>
+                <div class="dot" data-index="1"></div>
+                <div class="dot" data-index="2"></div>
+              </div>
+              <img
+                id="playPauseBtn"
+                class="play-pause"
+                src="./Assets/speaker.png"
+                alt="Play"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Our story section -->
+      <section>
+        <div class="story-container">
+          <div class="story">
+            <h3 class="title">Our Story</h3>
+            <p class="story-sub-title">
+              It is a long established fact that a reader will be distracted.
+            </p>
+            <p class="story-desc">
+              It is a long established fact that a reader will be distracted by
+              the readable content of a page when looking at its layout. The
+              point of using Lorem Ipsum is that it has a more-or-less normal
+              distribution of letters, as opposed to using 'Content here,
+              content here', making it look like readable English. Many desktop
+              publishing packages and web page editors now use Lorem Ipsum as
+              their default model text, and a search for 'lorem ipsum' will
+              uncover many web sites still in their infancy.
+            </p>
+
+            <p class="read-more">Read More</p>
+
+            <a href="" class="readmore-btn"
+              ><img src="./Assets/arrow.png" alt=""
+            /></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Our Packages -->
+      <section>
+        <div class="package">
+          <div class="package-title">
+            <h3 class="title">Our Packages</h3>
+            <p class="package-sub-title">The untold true essence of India</p>
+          </div>
+
+          <div class="package-imgs">
+            <div class="image-item" data-text="Image 1">
+              <img src="./Assets//package3.jpeg" alt="Image 1" />
+              <div class="overlay-text">
+                <div class="overlay-desc">
+                  <p>Kerala</p>
+                  <p>The untold true essence of India</p>
+                </div>
+                <img src="./Assets/packageicon.png" alt="" />
+              </div>
+            </div>
+            <div class="image-item" data-text="Image 2">
+              <img src="./Assets//package2.jpeg" alt="Image 2" />
+              <div class="overlay-text">
+                <div class="overlay-desc">
+                  <p>Tamilnadu</p>
+                  <p>The untold true essence of India</p>
+                </div>
+                <img src="./Assets/packageicon.png" alt="" />
+              </div>
+            </div>
+            <div class="image-item" data-text="Image 3">
+              <img src="./Assets//package1.jpeg" alt="Image 3" />
+              <div class="overlay-text">
+                <div class="overlay-desc">
+                  <p>North India</p>
+                  <p>The untold true essence of India</p>
+                </div>
+                <img src="./Assets/packageicon.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Tyndis Experiences -->
+      <section>
+        <div class="experience">
+          <div class="exp-slider">
+            <div class="exp-content">
+              <p class="exp-title">DISCOVER THE</p>
+              <h3 class="exp-sub-title">Tyndis Experiences</h3>
+            </div>
+
+            <div class="landing-Sliders">
+              <div class="card">
+                <div class="card-image">
+                  <img src="./Assets/expimg1.png" alt="Card 3" />
+                </div>
+                <div class="card-content">
+                  <h3 class="card-title">Kottayam</h3>
+                  <p class="card-sub">Kottayam Culinary Experience</p>
+                  <div class="card-stats">
+                    <div class="stat">
+                      <img src="./Assets//star.png" alt="" /> <span>4.3</span>
+                    </div>
+                    <div class="stat">24 Booked</div>
+                    <div class="stat">Dur: 24 Hrs</div>
+                  </div>
+                  <div class="price">
+                    <span>From</span>
+                    <p>
+                      Rs:2500.00
+                      <span
+                        style="
+                          color: rgba(24, 24, 24, 0.5);
+                          text-decoration: line-through;
+                          margin-left: 3px;
+                        "
+                        >3280.00</span
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-image">
+                  <img src="./Assets/expimg2.png" alt="Card 3" />
+                </div>
+                <div class="card-content">
+                  <h3 class="card-title">Kottayam</h3>
+                  <p class="card-sub">Kottayam Culinary Experience</p>
+                  <div class="card-stats">
+                    <div class="stat">
+                      <img src="./Assets//star.png" alt="" /> <span>4.3</span>
+                    </div>
+                    <div class="stat">24 Booked</div>
+                    <div class="stat">Dur: 24 Hrs</div>
+                  </div>
+                  <div class="price">
+                    <span>From</span>
+                    <p>
+                      Rs:2500.00
+                      <span
+                        style="
+                          color: rgba(24, 24, 24, 0.5);
+                          text-decoration: line-through;
+                          margin-left: 3px;
+                        "
+                        >3280.00</span
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-image">
+                  <img src="./Assets/expimg3.png" alt="Card 3" />
+                </div>
+                <div class="card-content">
+                  <h3 class="card-title">Kottayam</h3>
+                  <p class="card-sub">Kottayam Culinary Experience</p>
+                  <div class="card-stats">
+                    <div class="stat">
+                      <img src="./Assets//star.png" alt="" /> <span>4.3</span>
+                    </div>
+                    <div class="stat">24 Booked</div>
+                    <div class="stat">Dur: 24 Hrs</div>
+                  </div>
+                  <div class="price">
+                    <span>From</span>
+                    <p>
+                      Rs:2500.00
+                      <span
+                        style="
+                          color: rgba(24, 24, 24, 0.5);
+                          text-decoration: line-through;
+                          margin-left: 3px;
+                        "
+                        >3280.00</span
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-image">
+                  <img src="./Assets/expimg4.png" alt="Card 3" />
+                </div>
+                <div class="card-content">
+                  <h3 class="card-title">Kottayam</h3>
+                  <p class="card-sub">Kottayam Culinary Experience</p>
+                  <div class="card-stats">
+                    <div class="stat">
+                      <img src="./Assets//star.png" alt="" /> <span>4.3</span>
+                    </div>
+                    <div class="stat">24 Booked</div>
+                    <div class="stat">Dur: 24 Hrs</div>
+                  </div>
+                  <div class="price">
+                    <span>From</span>
+                    <p>
+                      Rs:2500.00
+                      <span
+                        style="
+                          color: rgba(24, 24, 24, 0.5);
+                          text-decoration: line-through;
+                          margin-left: 3px;
+                        "
+                        >3280.00</span
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-image">
+                  <img src="./Assets/expimg2.png" alt="Card 3" />
+                </div>
+                <div class="card-content">
+                  <h3 class="card-title">Kottayam</h3>
+                  <p class="card-sub">Kottayam Culinary Experience</p>
+                  <div class="card-stats">
+                    <div class="stat">
+                      <img src="./Assets//star.png" alt="" /> <span>4.3</span>
+                    </div>
+                    <div class="stat">24 Booked</div>
+                    <div class="stat">Dur: 24 Hrs</div>
+                  </div>
+                  <div class="price">
+                    <span>From</span>
+                    <p>
+                      Rs:2500.00
+                      <span
+                        style="
+                          color: rgba(24, 24, 24, 0.5);
+                          text-decoration: line-through;
+                          margin-left: 3px;
+                        "
+                        >3280.00</span
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- status 1 -->
+
+      <section>
+        <div class="sts1-container">
+          <div class="status1">
+            <div class="sts-count">
+              <img src="./Assets/stsheart.png" class="sts1-img" alt="" />
+              <div>
+                <div style="display: flex; align-items: center">
+                  <p class="sts-number">123</p>
+                  <p class="sts-val">k</p>
+                </div>
+
+                <p>Happy Travellers</p>
+              </div>
+            </div>
+
+            <div class="sts-count">
+              <img src="./Assets/stsstar.png" class="sts1-img" alt="" />
+              <div>
+                <div style="display: flex; align-items: center">
+                  <p class="sts-number">400</p>
+                  <p class="sts-val">+</p>
+                </div>
+                <p>Five Star Ratings</p>
+              </div>
+            </div>
+
+            <div class="sts-count">
+              <img src="./Assets/stsdesti.png" class="sts1-img" alt="" />
+              <div>
+                <div style="display: flex; align-items: center">
+                  <p class="sts-number">200</p>
+                  <p class="sts-val">+</p>
+                </div>
+                <p>Curated Toures</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- int package -->
+
+      <section>
+        <div class="int-package">
+          <div class="int-content">
+            <p class="int-title">DISCOVER</p>
+            <h3 class="int-sub-title">International Packages</h3>
+
+            <div class="int-cards-container">
+              <div class="int-card">
+                <img src="./Assets/intimg1.png" class="int-img" alt="" />
+                <p>Japan</p>
+                <a href=""> <img src="./Assets/intarrow.png" alt="" /> </a>
+              </div>
+              <div class="int-card">
+                <img src="./Assets/intimg2.png" class="int-img" alt="" />
+                <p>Australia</p>
+                <a href=""> <img src="./Assets/intarrow.png" alt="" /> </a>
+              </div>
+              <div class="int-card">
+                <img src="./Assets/intimg3.png" class="int-img" alt="" />
+                <p>Europe</p>
+                <a href=""> <img src="./Assets/intarrow.png" alt="" /> </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- tree monks -->
+
+      <section>
+        <div class="tree-monks">
+          <div class="monk-content">
+            <p class="int-title">DISCOVER</p>
+            <h3 class="int-sub-title">TreeMonks</h3>
+
+            <div class="monk-card">
+              <div class="card-left">
+                <img src="./Assets/monk-insta.png" alt="" />
+
+                <h3>
+                  Join With Our <br />
+                  Journey
+                </h3>
+
+                <a href="">Follow Instagram</a>
+              </div>
+
+              <div class="monk-right">
+                <div class="gallery-container">
+                  <div class="gallery-left">
+                    <div class="gallery-left-top">
+                      <div class="gallery-left-top-left">
+                        <div
+                          class="gallery-image small mb-2"
+                          style="background-image: url('./Assets/monkimg1.png')"
+                        ></div>
+                        <div
+                          class="gallery-image large"
+                          style="background-image: url('./Assets/monkimg4.png')"
+                        ></div>
+                      </div>
+                      <div class="gallery-left-top-right">
+                        <div
+                          class="gallery-image small2 mb-2"
+                          style="background-image: url('./Assets/monkimg2.png')"
+                        ></div>
+                        <div
+                          class="gallery-image large2"
+                          style="background-image: url('./Assets/monkimg5.png')"
+                        ></div>
+                      </div>
+                    </div>
+                    <div
+                      class="gallery-image wide"
+                      style="background-image: url('./Assets/monkimg7.png')"
+                    ></div>
+                  </div>
+                  <div class="gallery-right">
+                    <div
+                      class="gallery-image medium mb-2"
+                      style="background-image: url('./Assets/monkimg3.png')"
+                    ></div>
+                    <div
+                      class="gallery-image tall"
+                      style="background-image: url('./Assets/monkimg6.png')"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- sustainable effort -->
+
+      <section>
+        <div class="effort-container">
+          <div class="effort-content">
+            <div class="effort-title">
+              <h3>Sustainability Efforts</h3>
+              <p>
+                Our commitment remains: Continually striving to create a more
+                sustainable inclusive and welcoming world for all living beings
+              </p>
+            </div>
+
+            <div class="effort-card">
+              <img
+                src="./Assets/effortgrid.png"
+                class="effortgrid-img"
+                alt=""
+              />
+              <img
+                src="./Assets/effortcardimg.png"
+                class="effortcard-img"
+                alt=""
+              />
+              <div class="effort-card-content">
+                <h4>
+                  Local Community <br />
+                  engagement
+                </h4>
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a type
+                  specimen book
+                </p>
+
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a type
+                  specimen book
+                </p>
+              </div>
+
+              <img
+                src="./Assets/effortbg2.png"
+                class="effortcardbg-img"
+                alt=""
+              />
+
+              <div class="effortgradient-overlay"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- status 2 -->
+      <section>
+        <div class="sts2-container">
+          <div class="sts2-content">
+            <div class="sts2-count">
+              <img src="./Assets/tripadvisor.png" class="sts2-img" alt="" />
+              <div>
+                <p>TripAdvisor</p>
+                <div style="display: flex; align-items: center">
+                  <p class="sts-number">100</p>
+                  <p class="sts-val">+</p>
+                  <p style="font-size: 14px">Five Star Reviews</p>
+                </div>
+
+                <img
+                  src="./Assets/5star.png"
+                  style="margin-block: 5px"
+                  alt=""
+                />
+              </div>
+            </div>
+
+            <div class="sts2-count">
+              <img src="./Assets/google.png" class="sts2-img" alt="" />
+              <div>
+                <p>Google</p>
+                <div style="display: flex; align-items: center">
+                  <p class="sts-number">70</p>
+                  <p class="sts-val">+</p>
+                  <p style="font-size: 14px">Five Star Reviews</p>
+                </div>
+
+                <img
+                  src="./Assets/5star.png"
+                  style="margin-block: 5px"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- blog -->
+
+      <section>
+        <div class="blog-slider">
+          <p class="blog-title">Blogs</p>
+
+          <div class="blog-Sliders">
+            <div class="blog-card">
+              <div class="blog-image">
+                <img src="./Assets/blogimg1.png" alt="Card 3" />
+              </div>
+              <div class="blog-content">
+                <p class="blog-auther">
+                  Sujith Narayanan
+                  <span
+                    style="
+                      color: rgba(24, 24, 24, 0.5);
+                      font-size: 18px;
+                      margin-left: 5px;
+                    "
+                    >13 Dec 2018</span
+                  >
+                </p>
+                <h3 class="blog-des">Travel to Kerala during COVID-19</h3>
+                <button class="blog-btn">ReadMore</button>
+              </div>
+            </div>
+            <div class="blog-card">
+              <div class="blog-image">
+                <img src="./Assets/blogimg2.png" alt="Card 3" />
+              </div>
+              <div class="blog-content">
+                <p class="blog-auther">
+                  Sujith Narayanan
+                  <span
+                    style="
+                      color: rgba(24, 24, 24, 0.5);
+                      font-size: 18px;
+                      margin-left: 5px;
+                    "
+                    >13 Dec 2018</span
+                  >
+                </p>
+                <h3 class="blog-des">Travel to Kerala during COVID-19</h3>
+                <button class="blog-btn">ReadMore</button>
+              </div>
+            </div>
+            <div class="blog-card">
+              <div class="blog-image">
+                <img src="./Assets/blogimg3.png" alt="Card 3" />
+              </div>
+              <div class="blog-content">
+                <p class="blog-auther">
+                  Sujith Narayanan
+                  <span
+                    style="
+                      color: rgba(24, 24, 24, 0.5);
+                      font-size: 18px;
+                      margin-left: 5px;
+                    "
+                    >13 Dec 2018</span
+                  >
+                </p>
+                <h3 class="blog-des">Travel to Kerala during COVID-19</h3>
+                <button class="blog-btn">ReadMore</button>
+              </div>
+            </div>
+            <div class="blog-card">
+              <div class="blog-image">
+                <img src="./Assets/blogimg2.png" alt="Card 3" />
+              </div>
+              <div class="blog-content">
+                <p class="blog-auther">
+                  Sujith Narayanan
+                  <span
+                    style="
+                      color: rgba(24, 24, 24, 0.5);
+                      font-size: 18px;
+                      margin-left: 5px;
+                    "
+                    >13 Dec 2018</span
+                  >
+                </p>
+                <h3 class="blog-des">Travel to Kerala during COVID-19</h3>
+                <button class="blog-btn">ReadMore</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- sub -->
+      <section>
+        <div class="sub">
+          <div class="sub-content">
+            <p>SUBSCRIBE</p>
+            <h4>Our News Letter</h4>
+            <div class="sub-form">
+              <input type="text" placeholder="Enter Your Email" />
+              <button>
+                Submit <span><img src="./Assets/subarrow.png" alt="" /></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- footer -->
+
+      <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3>Connect With Us</h3>
+            <div style="display: flex; gap: 40px; margin-block: 20px">
+              <img
+                src="./Assets/fb.png"
+                style="width: 24px; height: 24px; object-fit: cover"
+                alt=""
+              />
+              <img
+                src="./Assets/insta.png"
+                style="width: 24px; height: 24px"
+                alt=""
+              />
+              <img
+                src="./Assets/linkdin.png"
+                style="width: 24px; height: 24px"
+                alt=""
+              />
+              <img
+                src="./Assets/twitter.png"
+                style="width: 24px; height: 24px"
+                alt=""
+              />
+            </div>
+
+            <div>
+              <div class="contact-phone">
+                <img
+                  src="./Assets/phone.png"
+                  style="
+                    width: 20px;
+                    height: 20px;
+                    object-fit: cover;
+                    padding: 5px;
+                    border-radius: 100%;
+                    border: 1px solid rgba(0, 0, 0, 0.26);
+                  "
+                  alt=""
+                />
+                <div style="display: flex; flex-direction: column">
+                  <a href="">+91 9495070022</a>
+                  <a href="">+91 9447960022</a>
+                </div>
+              </div>
+
+              <div class="contact-email">
+                <img
+                  src="./Assets/email.png"
+                  style="
+                    width: 20px;
+                    height: 20px;
+                    object-fit: cover;
+                    padding: 5px;
+                    border-radius: 100%;
+                    border: 1px solid rgba(0, 0, 0, 0.26);
+                  "
+                  alt=""
+                />
+                <a href=""> contact@tyndistravel.com</a>
+              </div>
+            </div>
+          </div>
+          <div class="footer-column">
+            <h3>Address</h3>
+
+            <p class="footer-address">
+              Tyndis Travel <br />
+              Co Orbit, 10th floor - Noel Focus, <br />
+              Infopark - Kakkanad Road, <br />
+              Kochi-682037
+            </p>
+          </div>
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#">Curated Tours </a></li>
+              <li><a href="#"> Blogs</a></li>
+              <li><a href="#"> MICE-Business Travel</a></li>
+              <li><a href="#"> Vlogs</a></li>
+              <li><a href="#">Enquiry</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>About Tyndis</h3>
+            <ul>
+              <li><a href="#">Responsible Travel </a></li>
+              <li><a href="#"> Clients</a></li>
+              <li><a href="#"> Private Pool Villas</a></li>
+              <li><a href="#"> Digital De Addiction </a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="footer-btm-content">
+            <p>2019 © Tyndis | All Rights Reserved</p>
+            <div>
+              <a href="">Terms & Conditions</a>
+              <span>|</span>
+              <a href="">Privacy Policy</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- banner js -->
+    <script type="text/javascript" src="./Assets/js/Banner.js"></script>
+
+    <!-- Add the slick-theme.css if you want default styling -->
+    <!-- Add the slick-theme.css if you want default styling -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <!-- <script src="../../assets/js/helpers/hs.slick-carousel.js"></script> -->
+
+    <!-- slider js -->
+    <script type="text/javascript" src="./Assets/js/Slider.js"></script>
+
+    <!-- count up js -->
+    <script type="text/javascript" src="./Assets/js//Counter.js"></script>
+  </body>
+</html>

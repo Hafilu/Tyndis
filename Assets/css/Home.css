@@ -1,0 +1,1407 @@
+/* General Styles */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Navbar Styles */
+.navbar {
+  position: absolute;
+  top: 0;
+  padding-top: 15px;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  color: white;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-size: 24px;
+  font-weight: 500;
+  font-family: "Figtree", sans-serif;
+}
+
+.navbar .hamburger {
+  height: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  justify-content: space-between;
+}
+
+.lang {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Figtree", sans-serif;
+}
+
+.lang span {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+
+
+/* Drawer Styles */
+.drawer {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100%;
+  background: white;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  transition: right 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  z-index: 1001;
+}
+
+.drawer.open {
+  right: 0;
+}
+
+.drawer .header {
+  padding: 20px;
+  background: #333;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+#close {
+  cursor: pointer;
+}
+.drawer .footer {
+  margin-top: auto;
+  padding: 20px;
+  background: #333;
+  color: white;
+  text-align: center;
+}
+
+.drawer .content {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+/* Backdrop Styles */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.backdrop.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Background Styles */
+.bg {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.bg::before {
+  content: ""; /* Required for pseudo-elements */
+  position: absolute; /* Position relative to the parent */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Overlay color (semi-transparent black) */
+  z-index: 1; /* Ensure it appears above the background */
+}
+
+.bg video,
+.bg img {
+  position: relative;
+  z-index: 0; /* Place under the overlay */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Hero Styles */
+.hero {
+  position: absolute;
+  bottom: 20px;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  z-index: 90;
+}
+
+.hero-text {
+  text-align: left;
+  margin-bottom: 80px;
+  width: 40%;
+}
+
+#heroText1 {
+  font-size: 102px;
+  font-family: "Playfair", serif;
+  margin: 0px;
+  font-weight: 500;
+}
+#heroText2 {
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "Figtree", sans-serif;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dots {
+  display: flex;
+  flex-direction: column;
+}
+
+.dot {
+  width: 2px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+
+.dot.active {
+  background: white;
+}
+
+.play-pause {
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+}
+
+/* story section */
+.story-container {
+  background: url("/Assets/storybg.png") no-repeat;
+  background-size: contain; /* Ensure image fits the specified dimensions */
+  z-index: 0; /* Place behind the content */
+}
+.story {
+  width: 50%;
+  text-align: center;
+  margin-inline: auto;
+  margin-top: 100px;
+}
+
+.title {
+  color: rgba(84, 48, 48, 1);
+  font-size: 70px;
+  font-family: "Playfair", serif;
+  margin: 0px;
+  font-weight: 500;
+}
+
+.story-sub-title {
+  color: rgba(24, 24, 24, 1);
+  width: 60%;
+  margin-inline: auto;
+  font-size: 26px;
+  font-family: "Playfair", serif;
+  margin-block: 20px;
+  font-weight: 500;
+}
+
+.story-desc {
+  color: rgba(24, 24, 24, 0.7);
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "Figtree", sans-serif;
+  margin-bottom: 50px;
+}
+.read-more {
+  color: rgba(24, 24, 24, 1);
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "Figtree", sans-serif;
+}
+.readmore-btn img {
+  cursor: pointer;
+  width: 37px;
+  height: 37px;
+  margin-bottom: 30px;
+}
+
+/* package */
+
+.package {
+  position: relative;
+  width: 100%;
+
+  background-color: rgba(242, 238, 226, 0.9); /* Background color */
+  padding-bottom: 30px;
+  box-sizing: border-box;
+}
+
+.package::before {
+  content: "";
+  position: absolute;
+  top: 70px; /* Adjust according to padding */
+  right: 50px;
+  width: 120px;
+  height: 400px;
+  background: url("/Assets/packagrbg.png") no-repeat;
+  background-size: contain; /* Ensure image fits the specified dimensions */
+  opacity: 0.3; /* Control transparency of the image */
+  z-index: 0; /* Place behind the content */
+}
+
+.package > * {
+  position: relative;
+  z-index: 1; /* Ensure content is above the image */
+}
+
+.package-title {
+  padding-top: 100px;
+  text-align: center;
+}
+
+.package-sub-title {
+  color: rgba(24, 24, 24, 1);
+
+  font-size: 26px;
+  font-family: "Playfair", serif;
+  margin-block: 20px;
+  font-weight: 500;
+}
+
+.package-imgs {
+  display: flex;
+  gap: 16px;
+  height: 500px;
+  width: 90%;
+  margin-inline: auto;
+  margin-block: 50px;
+}
+
+.image-container {
+  display: flex;
+  gap: 16px;
+  height: 400px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.image-item {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  transition: flex 0.5s ease, transform 0.3s ease; /* Smooth transition for flex and any transform */
+}
+
+.image-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease; /* Smooth zoom effect for the image */
+}
+
+.overlay-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  color: white;
+  text-align: center;
+  padding-bottom: 30px;
+  opacity: 1;
+  transition: opacity 0.3s ease; /* Smooth fade-in for the text overlay */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.overlay-text img {
+  cursor: pointer;
+  width: 37px;
+  height: 37px;
+  margin-right: 30px;
+  opacity: 0; /* Initially hide the image */
+  transition: opacity 0.3s ease; /* Smooth transition for visibility */
+}
+
+/* Hover effect on the image-item */
+.image-item:hover .overlay-text img {
+  opacity: 1; /* Show image when parent .image-item is hovered */
+}
+
+.overlay-text .overlay-desc {
+  margin-block: 0px;
+  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.overlay-desc p {
+  margin: 0px;
+  font-family: "Playfair", serif;
+  font-weight: 500;
+}
+
+/* Select the first <p> inside .overlay-desc */
+.overlay-text .overlay-desc p:first-of-type {
+  /* Your styles for the first <p> */
+  font-size: 26px;
+}
+
+/* Select the second <p> inside .overlay-desc */
+.overlay-text .overlay-desc p:nth-of-type(2) {
+  /* Your styles for the second <p> */
+  font-size: 18px;
+  margin-top: 5px;
+  opacity: 0;
+}
+
+.image-item:hover .overlay-text .overlay-desc p:nth-of-type(2) {
+  opacity: 1; /* Show image when parent .image-item is hovered */
+}
+
+.image-item:hover {
+  flex: 2;
+}
+
+.image-item:not(:hover) {
+  flex: 1;
+}
+
+/* exp slider */
+
+.experience {
+  position: relative;
+  width: 100%;
+
+  background-color: white; /* Background color */
+  padding-bottom: 30px;
+  box-sizing: border-box;
+}
+
+.experience::before {
+  content: "";
+  position: absolute;
+  top: 0px; /* Adjust according to padding */
+  left: 50px;
+  width: 120px;
+  height: 150px;
+  background: url("/Assets/expbg.png") no-repeat;
+  background-size: contain; /* Ensure image fits the specified dimensions */
+  opacity: 0.3; /* Control transparency of the image */
+  z-index: 0; /* Place behind the content */
+  transform: rotate(-30deg);
+}
+
+.experience > * {
+  position: relative;
+  z-index: 1; /* Ensure content is above the image */
+}
+.exp-slider {
+  width: 90%;
+  margin-inline: auto;
+}
+.exp-content {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.exp-title {
+  font-size: 26px;
+  font-family: "Figtree", sans-serif;
+  margin: 0px;
+  font-weight: 500;
+  color: rgba(159, 159, 159, 1);
+}
+
+.exp-sub-title {
+  color: rgba(84, 48, 48, 1);
+
+  font-size: 70px;
+  font-family: "Playfair", serif;
+  margin-block: 10px;
+  font-weight: 500;
+}
+
+.card {
+  background: none;
+
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  background-color: rgba(246, 244, 236, 1);
+}
+.card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+.card-content {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 50%;
+}
+
+.card-title {
+  font-size: 18px;
+  margin: 0;
+  padding-top: 5px;
+  font-weight: 400;
+  font-family: "Figtree", sans-serif;
+  color: rgba(23, 23, 24, 0.5);
+}
+
+.card-sub {
+  font-size: 24px;
+  margin: 0;
+  padding-block: 10px;
+  font-weight: 500;
+  font-family: "Figtree", sans-serif;
+  color: rgba(24, 24, 24, 1);
+}
+
+.card-stats {
+  display: flex;
+  justify-content: flex-start;
+  gap: 8px;
+  margin-top: 8px;
+}
+.stat {
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+
+  padding: 5px 10px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  color: rgba(23, 23, 24, 0.5);
+}
+
+.stat img {
+  width: 10px;
+  height: 10px;
+  object-fit: contain;
+}
+
+.price {
+  font-size: 22px;
+  font-weight: 500;
+  font-family: "Figtree", sans-serif;
+  color: rgba(24, 24, 24, 1);
+  padding-block: 10px;
+}
+.price span {
+  font-size: 16px;
+}
+
+.price p {
+  margin: 0;
+}
+
+/* status 1 */
+
+
+.sts1-container {
+  background: url("/Assets/status1bg.png") no-repeat;
+  background-position: center;
+  background-color: rgba(242, 238, 226, 0.9);
+  background-size: cover; /* Ensure image fits the specified dimensions */
+  width: 100%;
+  height: 250px;
+  z-index: 0; /* Place behind the content */
+  margin: 20px 0 50px 0px;
+}
+.status1 {
+  width: 75%;
+  margin-inline: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.sts-count {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: rgba(84, 48, 48, 1);
+  font-family: "Figtree", sans-serif;
+}
+
+.sts-count .sts1-img {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.sts-count p {
+  margin: 0px;
+}
+.sts-number {
+  margin: 0px;
+  font-size: 22px;
+  font-weight: bold;
+  padding-block: 10px;
+}
+
+.sts-val {
+  margin: 0px;
+  font-size: 22px;
+  font-weight: bold;
+  padding-block: 10px;
+}
+
+/* interbationel packages */
+
+.int-package {
+  position: relative;
+  width: 100%;
+
+  background-color: white; /* Background color */
+  padding-bottom: 30px;
+  box-sizing: border-box;
+}
+
+.int-package::before {
+  content: "";
+  position: absolute;
+  top: -50px; /* Adjust according to padding */
+  left: 50px;
+  width: 400px;
+  height: 300px;
+  background: url("/Assets/discoverbg.png") no-repeat;
+  background-size: contain; /* Ensure image fits the specified dimensions */
+  opacity: 1; /* Control transparency of the image */
+  z-index: 0; /* Place behind the content */
+}
+
+.int-package > * {
+  position: relative;
+  z-index: 1; /* Ensure content is above the image */
+}
+
+.int-content {
+  width: 82%;
+  margin-inline: auto;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.int-title {
+  font-size: 26px;
+  font-family: "Figtree", sans-serif;
+  margin: 0px;
+  font-weight: 500;
+  color: rgba(24, 24, 24, 1);
+}
+
+.int-sub-title {
+  color: rgba(84, 48, 48, 1);
+
+  font-size: 70px;
+  font-family: "Playfair", serif;
+  margin-block: 10px;
+  font-weight: 500;
+}
+
+/* Base styles for the card container */
+.int-cards-container {
+  margin-top: 30px;
+  display: grid;
+  gap: 1rem; /* Space between grid items */
+  padding: 1rem;
+  grid-template-columns: repeat(1, 1fr); /* Default to 1 column */
+}
+
+/* Grid layout for tablets (768px and above) */
+@media (min-width: 768px) {
+  .int-cards-container {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  }
+}
+
+/* Grid layout for desktops (1024px and above) */
+@media (min-width: 1024px) {
+  .int-cards-container {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  }
+}
+
+/* Styling individual cards */
+.int-card {
+  border-bottom: 1px solid rgba(0, 0, 0, 1); /* Light border */
+
+  overflow: hidden; /* Crop overflowing content */
+  text-align: center; /* Center content */
+  padding-bottom: 15px;
+}
+
+.int-card p {
+  font-size: 22px;
+  font-family: "Figtree", sans-serif;
+  margin-block: 25px;
+  font-weight: 500;
+  color: rgba(24, 24, 24, 1);
+}
+
+.int-img {
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* tree monks */
+
+.tree-monks {
+  position: relative;
+  width: 100%;
+
+  background-color: white; /* Background color */
+  padding-bottom: 30px;
+  box-sizing: border-box;
+}
+
+.tree-monks::before {
+  content: "";
+  position: absolute;
+  top: -200px; /* Adjust according to padding */
+  right: 50px;
+  width: 400px;
+  height: 300px;
+  background: url("/Assets/monkbg.png") no-repeat;
+  background-size: contain; /* Ensure image fits the specified dimensions */
+  opacity: 1; /* Control transparency of the image */
+  z-index: 0; /* Place behind the content */
+}
+
+.tree-monks > * {
+  position: relative;
+  z-index: 1; /* Ensure content is above the image */
+}
+
+.monk-content {
+  width: 90%;
+  margin-inline: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.monk-card {
+  background-color: rgba(248, 248, 248, 1);
+  background-image: url("/Assets/monkbg2.png");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 400px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 80px;
+  margin-block: 50px;
+}
+
+.monk-card .card-left {
+  text-align: left;
+}
+
+.monk-card .card-left h3 {
+  font-size: 40px;
+  font-family: "Playfair", serif;
+}
+.monk-card .card-left img {
+  width: 70px;
+  left: 70px;
+}
+
+.monk-card .card-left a {
+  width: 70px;
+  left: 70px;
+  text-decoration: none;
+  color: rgba(24, 24, 24, 1);
+  border-bottom: 1px solid rgba(24, 24, 24, 1);
+  padding-bottom: 5px;
+}
+
+.gallery-container {
+  display: flex;
+  height: 400px;
+  width: 35vw;
+}
+
+.gallery-left {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery-left-top {
+  display: flex;
+  height: 80%;
+}
+.gallery-left-top-left {
+  margin-right: 8px;
+}
+.gallery-left-top-left,
+.gallery-left-top-right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.mb-2 {
+  margin-bottom: 8px;
+}
+
+.mt-4 {
+  margin-top: 16px;
+}
+
+.gallery-right {
+  width: 30%;
+  margin-left: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery-image {
+  border-radius: 8px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+.wide {
+  margin-top: 8px;
+}
+.small {
+  height: 45%;
+}
+
+.large {
+  height: 55%;
+}
+
+.small2 {
+  height: 35%;
+}
+
+.large2 {
+  height: 65%;
+}
+
+.wide {
+  height: 20%;
+}
+
+.medium {
+  height: 25%;
+}
+
+.tall {
+  height: calc(75% + 8px);
+}
+
+/* effort */
+.effort-container {
+  position: relative;
+  width: 100%;
+  padding-top: 100px;
+  margin-top: 20px;
+  background-color: rgba(242, 238, 226, 0.9); /* Background color */
+  padding-bottom: 30px;
+  box-sizing: border-box;
+}
+
+.effort-container::before {
+  content: "";
+  position: absolute;
+  top: 45%; /* Adjust according to padding */
+  left: 10px;
+  width: 200px;
+  height: 200px;
+  background: url("/Assets/effortbg1.png") no-repeat;
+  background-size: cover; /* Ensure image fits the specified dimensions */
+  opacity: 1; /* Control transparency of the image */
+  z-index: 0; /* Place behind the content */
+}
+
+.effort-container > * {
+  position: relative;
+  z-index: 1; /* Ensure content is above the image */
+}
+
+.effort-title {
+  text-align: center;
+}
+
+.effort-title h3 {
+  color: rgba(84, 48, 48, 1);
+  font-size: 70px;
+  font-family: "Playfair", serif;
+  margin: 0px;
+  font-weight: 500;
+}
+
+.effort-title p {
+  color: rgba(24, 24, 24, 1);
+  width: 60%;
+  margin-inline: auto;
+  font-size: 20px;
+  font-family: "Figtree", sans-serif;
+  margin-block: 20px;
+  font-weight: 500;
+}
+
+.effort-card {
+  width: 70%;
+  margin-inline: auto;
+  background-color: white;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  padding: 20px;
+  position: relative;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.effort-card .effortcard-img {
+  width: 100%;
+  object-fit: cover;
+  height: 400px;
+  border-radius: 10px; /* Ensure rounded corners */
+  display: block; /* Prevent extra spacing below images caused by inline display */
+}
+
+.effort-card .effortgrid-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 150px;
+  height: 150px;
+}
+
+.effort-card .effortcardbg-img {
+  position: absolute;
+  bottom: -100px;
+  right: -120px;
+  width: 250px;
+  height: 250px;
+  z-index: 10;
+}
+
+.effort-card-content {
+  padding: 20px;
+}
+
+.effort-card-content h4 {
+  color: rgba(24, 24, 24, 1);
+
+  font-size: 24px;
+  font-family: "Figtree", sans-serif;
+  margin-block: 20px;
+  font-weight: 500;
+}
+
+.effort-card-content p {
+  color: rgba(24, 24, 24, 0.7);
+
+  font-size: 18px;
+  font-family: "Figtree", sans-serif;
+  margin-block: 20px;
+  font-weight: 500;
+}
+
+.effortgradient-overlay {
+  position: absolute;
+  bottom: -60px;
+  left: 0;
+  border-radius: 15px; /* Equivalent to rounded-xl */
+  pointer-events: none;
+  height: 40px;
+  width: 100%;
+
+  background: linear-gradient(to top, transparent, white, white);
+}
+
+/* sts2 */
+
+
+.sts2-container {
+  background: url("/Assets/stsbg2.png") no-repeat;
+  background-position: center;
+  background-color: rgba(242, 238, 226, 0.9);
+  background-size: contain; /* Ensure image fits the specified dimensions */
+  width: 90%;
+  margin-inline: auto;
+  border-radius: 15px;
+  height: 250px;
+  z-index: 0; /* Place behind the content */
+  margin-block: 70px;
+}
+
+.sts2-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 150px;
+  width: 100%;
+}
+
+.sts2-count {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 10px;
+  color: rgba(84, 48, 48, 1);
+  font-family: "Figtree", sans-serif;
+}
+
+.sts2-count .sts2-img {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.sts2-count p {
+  margin: 0px;
+}
+
+/* blogs */
+
+.blog-slider {
+  width: 90%;
+  margin-inline: auto;
+  padding-bottom: 30px;
+}
+
+.blog-title {
+  color: rgba(84, 48, 48, 1);
+
+  font-size: 70px;
+  font-family: "Playfair", serif;
+  margin: 0;
+  font-weight: 500;
+}
+
+.blog-card {
+  background: none;
+
+  overflow: hidden;
+
+  background-color: rgba(248, 248, 248, 1);
+  transition: box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+  box-shadow: 0 0 10px 5px rgba(116, 129, 179, 0.17); /* Add the semi-transparent glow effect */
+}
+
+.blog-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.blog-content {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 50%;
+}
+
+.blog-auther {
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "Figtree", sans-serif;
+  color: rgba(24, 24, 24, 1);
+}
+
+.blog-des {
+  width: 60%;
+  font-size: 26px;
+  font-weight: 500;
+  font-family: "Playfair", serif;
+  color: rgba(24, 24, 24, 1);
+  margin: 0;
+  padding-block: 10px;
+}
+
+.blog-btn {
+  background-color: transparent;
+  border: none;
+  text-align: start;
+  padding: 10px 0px 15px 0px;
+  text-decoration: underline;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* sub */
+
+.sub {
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(
+      rgba(23, 25, 31, 0.1),
+      rgba(23, 25, 31, 0.1)
+    ),
+    /* Overlay */ url("/Assets/subbg.png") no-repeat center/cover; /* Background image */
+  color: white; /* Adjust text color to contrast with overlay */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sub-content {
+  text-align: center;
+  width: 100%;
+}
+
+.sub-content p {
+  font-size: 26px;
+  font-weight: 500;
+  font-family: "Figtree", sans-serif;
+}
+
+.sub-content h4 {
+  font-size: 70px;
+  font-weight: 500;
+  font-family: "Playfair", serif;
+  margin: 0px;
+}
+
+.sub-form {
+  display: flex;
+  margin-block: 30px;
+  width: 40%;
+  margin-inline: auto;
+}
+
+.sub-form input {
+  background-color: transparent;
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 1);
+  border-right: 0px;
+  padding: 6px 15px;
+  height: 40px;
+  color: white;
+  font-size: 20px;
+  width: 100%;
+}
+
+.sub-form button {
+  background-color: transparent;
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 1);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 12px;
+  height: 54px;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.sub-form img {
+  margin-top: 5px;
+}
+
+/* footer */
+
+.footer-content {
+  width: 90%;
+  margin-inline: auto;
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+}
+
+.footer-column h3 {
+  margin-bottom: 10px;
+  font-family: "Figtree", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: rgba(144, 144, 144, 1);
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 5px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: rgba(23, 25, 31, 1);
+  font-family: "Figtree", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(0, 0, 0, 0.09);
+}
+
+.footer-btm-content {
+  width: 90%;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 5px;
+  color: rgba(144, 144, 144, 1);
+}
+
+.footer-btm-content a {
+  text-decoration: none;
+  color: rgba(144, 144, 144, 1);
+}
+
+.contact-phone {
+  display: flex;
+  align-items: start;
+  gap: 20px;
+  margin-block: 30px;
+}
+
+.contact-email {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact-email a {
+  margin: 0;
+  text-decoration: none;
+  color: rgba(23, 25, 31, 1);
+}
+
+.contact-phone a {
+  margin: 0;
+  padding-bottom: 10px;
+  font-size: 18px;
+  font-family: "Figtree", sans-serif;
+  text-decoration: none;
+  color: rgba(23, 25, 31, 1);
+}
+
+.footer-address {
+  font-family: "Figtree", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 30px;
+  color: rgba(23, 25, 31, 1);
+}
+
+
+/* Responsive Grid */
+@media (min-width: 768px) {
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer-content {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/*landing slider */
+
+.landing-Sliders {
+  padding: 50px 0;
+}
+
+.landing-Sliders .slick-slide {
+  margin: 0 6px;
+}
+.landing-Sliders .slick-list {
+  margin: 0 -6px;
+}
+.landing-Sliders .slick-arrow[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.landing-Sliders .slick-dots {
+  display: none !important;
+}
+.landing-Sliders .slick-arrow {
+  position: absolute;
+  content: "";
+  z-index: 9;
+  width: 30px;
+  height: 30px;
+  transform: translate(-50%, -50%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-indent: -9999px;
+}
+.landing-Sliders .slick-arrow::before {
+  content: "";
+}
+.landing-Sliders .slick-prev {
+  top: 40%;
+  bottom: inherit;
+  left: 0%;
+  right: inherit;
+  background-size: cover;
+  background-image: url("/Assets/expPrev.png");
+}
+.landing-Sliders .slick-next {
+  top: 40%;
+  bottom: inherit;
+  right: -30px;
+  left: inherit;
+  background-size: cover;
+  background-image: url("/Assets/expNext.png");
+}
+
+/*blog slider */
+
+.blog-Sliders {
+  padding: 50px 0;
+}
+
+.blog-Sliders .slick-slide {
+  margin: 0 6px;
+}
+.blog-Sliders .slick-list {
+  margin: 0 -6px;
+}
+.blog-Sliders .slick-arrow[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.blog-Sliders .slick-dots {
+  display: none !important;
+}
+.blog-Sliders .slick-arrow {
+  position: absolute;
+  content: "";
+  z-index: 9;
+  width: 30px;
+  height: 30px;
+  transform: translate(-50%, -50%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-indent: -9999px;
+}
+.blog-Sliders .slick-arrow::before {
+  content: "";
+}
+.blog-Sliders .slick-prev {
+  top: -30px;
+  bottom: inherit;
+  left: 96%;
+  right: inherit;
+  background-size: cover;
+  background-image: url("/Assets/expPrev.png");
+}
+.blog-Sliders .slick-next {
+  top: -30px;
+  bottom: inherit;
+  right: -15px;
+  left: inherit;
+  background-size: cover;
+  background-image: url("/Assets/expNext.png");
+}
+@media only screen and (max-width: 992px) {
+  .blog-Sliders .slick-prev {
+    left: 90%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .blog-Sliders .slick-prev {
+    left: 85%;
+  }
+}
+
+@media only screen and (max-width: 490px) {
+  .blog-Sliders .slick-prev {
+    left: 85%;
+  }
+}
+ 
