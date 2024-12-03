@@ -1,4 +1,3 @@
- 
 const hamburger = document.getElementById("hamburger");
 const drawer = document.getElementById("drawer");
 const backdrop = document.getElementById("backdrop");
@@ -37,12 +36,11 @@ const heroData = [
   },
 ];
 
-const videoSrc = "/Assets/video1.mp4"; // Video file
+const videoSrc = "./Assets/video1.mp4"; // Video file
 const imageSrcs = [
   "/Assets/banner.jpeg",
   "/Assets/banner.jpeg",
   "/Assets/banner.jpeg",
-  
 ]; // Image files
 
 // State variables
@@ -119,12 +117,11 @@ dots.forEach((dot) => {
 playPauseBtn.addEventListener("click", () => {
   playStatus = !playStatus;
   playPauseBtn.src = playStatus
-    ? "/Assets/speaker.png"
-    : "/Assets/speaker.png";
+    ? "./Assets/pause_icon.png"
+    : "./Assets/play_icon.png";
   updateBackground();
 });
 
 // Initial Render
 updateBackground();
 updateHero();
- 

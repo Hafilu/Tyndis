@@ -31,52 +31,50 @@
   <body>
     <div>
       <!-- banner section -->
-      <section>
-        <div class="container">
-          <!-- Navbar -->
-          <div class="navbar">
-            <div class="logo">LOGO</div>
-            <div class="hamburger" id="hamburger">
-              <p class="lang"><span>FR</span>/EN</p>
-              <img src="./Assets/menu.png" />
-            </div>
-          </div>
 
-          <!-- Backdrop -->
-          <div class="backdrop" id="backdrop"></div>
-
-          <!-- Drawer -->
-          <div class="drawer" id="drawer">
-            <div class="header"><span id="close">X</span> Drawer Header</div>
-            <div class="content">This is the drawer content.</div>
-            <div class="footer">Drawer Footer</div>
-          </div>
-
-          <!-- Background -->
-          <div class="bg fade-in" id="background"></div>
-
-          <!-- Hero -->
-          <div class="hero">
-            <div class="hero-text" id="heroContent">
-              <p id="heroText1">Welcome</p>
-              <p id="heroText2">to hf land</p>
-            </div>
-            <div class="controls">
-              <div class="dots">
-                <div class="dot" data-index="0"></div>
-                <div class="dot" data-index="1"></div>
-                <div class="dot" data-index="2"></div>
-              </div>
-              <img
-                id="playPauseBtn"
-                class="play-pause"
-                src="./Assets/speaker.png"
-                alt="Play"
-              />
-            </div>
+      <div class="container">
+        <!-- Navbar -->
+        <div class="navbar">
+          <div class="logo">LOGO</div>
+          <div class="hamburger" id="hamburger">
+            <img src="./Assets/menu.png" />
           </div>
         </div>
-      </section>
+
+        <!-- Backdrop -->
+        <div class="backdrop" id="backdrop"></div>
+
+        <!-- Drawer -->
+        <div class="drawer" id="drawer">
+          <div class="header"><span id="close">X</span> Drawer Header</div>
+          <div class="content">This is the drawer content.</div>
+          <div class="footer">Drawer Footer</div>
+        </div>
+
+        <!-- Background -->
+        <div class="bg fade-in" id="background"></div>
+
+        <!-- Hero -->
+        <div class="hero">
+          <div class="hero-text" id="heroContent">
+            <p id="heroText1">Welcome</p>
+            <p id="heroText2">to hf land</p>
+          </div>
+          <div class="controls">
+            <div class="dots">
+              <div class="dot" data-index="0"></div>
+              <div class="dot" data-index="1"></div>
+              <div class="dot" data-index="2"></div>
+            </div>
+            <img
+              id="playPauseBtn"
+              class="play-pause"
+              src="./Assets/play_icon.png"
+              alt="Play"
+            />
+          </div>
+        </div>
+      </div>
 
       <!-- Our story section -->
       <section>
@@ -115,8 +113,8 @@
           </div>
 
           <div class="package-imgs">
-            <div class="image-item" data-text="Image 1">
-              <img src="./Assets//package3.jpeg" alt="Image 1" />
+            <div class="package-image-item" data-text="Image 1">
+              <img src="./Assets/package3.jpeg" alt="Image 1" class="pkg-img" />
               <div class="overlay-text">
                 <div class="overlay-desc">
                   <p>Kerala</p>
@@ -125,8 +123,8 @@
                 <img src="./Assets/packageicon.png" alt="" />
               </div>
             </div>
-            <div class="image-item" data-text="Image 2">
-              <img src="./Assets//package2.jpeg" alt="Image 2" />
+            <div class="package-image-item" data-text="Image 2">
+              <img src="./Assets/package2.jpeg" alt="Image 2" class="pkg-img" />
               <div class="overlay-text">
                 <div class="overlay-desc">
                   <p>Tamilnadu</p>
@@ -135,8 +133,8 @@
                 <img src="./Assets/packageicon.png" alt="" />
               </div>
             </div>
-            <div class="image-item" data-text="Image 3">
-              <img src="./Assets//package1.jpeg" alt="Image 3" />
+            <div class="package-image-item" data-text="Image 3">
+              <img src="./Assets/package1.jpeg" alt="Image 3" class="pkg-img" />
               <div class="overlay-text">
                 <div class="overlay-desc">
                   <p>North India</p>
@@ -159,160 +157,168 @@
             </div>
 
             <div class="landing-Sliders">
-              <div class="card">
-                <div class="card-image">
-                  <img src="./Assets/expimg1.png" alt="Card 3" />
-                </div>
-                <div class="card-content">
-                  <h3 class="card-title">Kottayam</h3>
-                  <p class="card-sub">Kottayam Culinary Experience</p>
-                  <div class="card-stats">
-                    <div class="stat">
-                      <img src="./Assets//star.png" alt="" /> <span>4.3</span>
+              <a href="">
+                <div class="card">
+                  <div class="card-image">
+                    <img src="./Assets/expimg1.png" alt="Card 3" />
+                  </div>
+                  <div class="card-content">
+                    <h3 class="card-title">Kottayam</h3>
+                    <p class="card-sub">Kottayam Culinary Experience</p>
+                    <div class="card-stats">
+                      <div class="stat">
+                        <img src="./Assets//star.png" alt="" /> <span>4.3</span>
+                      </div>
+                      <div class="stat">24 Booked</div>
+                      <div class="stat">Dur: 24 Hrs</div>
                     </div>
-                    <div class="stat">24 Booked</div>
-                    <div class="stat">Dur: 24 Hrs</div>
-                  </div>
-                  <div class="price">
-                    <span>From</span>
-                    <p>
-                      Rs:2500.00
-                      <span
-                        style="
-                          color: rgba(24, 24, 24, 0.5);
-                          text-decoration: line-through;
-                          margin-left: 3px;
-                        "
-                        >3280.00</span
-                      >
-                    </p>
+                    <div class="price">
+                      <span>From</span>
+                      <p>
+                        Rs:2500.00
+                        <span
+                          style="
+                            color: rgba(24, 24, 24, 0.5);
+                            text-decoration: line-through;
+                            margin-left: 3px;
+                          "
+                          >3280.00</span
+                        >
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </a>
 
-              <div class="card">
-                <div class="card-image">
-                  <img src="./Assets/expimg2.png" alt="Card 3" />
-                </div>
-                <div class="card-content">
-                  <h3 class="card-title">Kottayam</h3>
-                  <p class="card-sub">Kottayam Culinary Experience</p>
-                  <div class="card-stats">
-                    <div class="stat">
-                      <img src="./Assets//star.png" alt="" /> <span>4.3</span>
+              <a href="">
+                <div class="card">
+                  <div class="card-image">
+                    <img src="./Assets/expimg2.png" alt="Card 3" />
+                  </div>
+                  <div class="card-content">
+                    <h3 class="card-title">Kottayam</h3>
+                    <p class="card-sub">Kottayam Culinary Experience</p>
+                    <div class="card-stats">
+                      <div class="stat">
+                        <img src="./Assets//star.png" alt="" /> <span>4.3</span>
+                      </div>
+                      <div class="stat">24 Booked</div>
+                      <div class="stat">Dur: 24 Hrs</div>
                     </div>
-                    <div class="stat">24 Booked</div>
-                    <div class="stat">Dur: 24 Hrs</div>
-                  </div>
-                  <div class="price">
-                    <span>From</span>
-                    <p>
-                      Rs:2500.00
-                      <span
-                        style="
-                          color: rgba(24, 24, 24, 0.5);
-                          text-decoration: line-through;
-                          margin-left: 3px;
-                        "
-                        >3280.00</span
-                      >
-                    </p>
+                    <div class="price">
+                      <span>From</span>
+                      <p>
+                        Rs:2500.00
+                        <span
+                          style="
+                            color: rgba(24, 24, 24, 0.5);
+                            text-decoration: line-through;
+                            margin-left: 3px;
+                          "
+                          >3280.00</span
+                        >
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </a>
+              <a href="">
+                <div class="card">
+                  <div class="card-image">
+                    <img src="./Assets/expimg3.png" alt="Card 3" />
+                  </div>
+                  <div class="card-content">
+                    <h3 class="card-title">Kottayam</h3>
+                    <p class="card-sub">Kottayam Culinary Experience</p>
+                    <div class="card-stats">
+                      <div class="stat">
+                        <img src="./Assets//star.png" alt="" /> <span>4.3</span>
+                      </div>
+                      <div class="stat">24 Booked</div>
+                      <div class="stat">Dur: 24 Hrs</div>
+                    </div>
+                    <div class="price">
+                      <span>From</span>
+                      <p>
+                        Rs:2500.00
+                        <span
+                          style="
+                            color: rgba(24, 24, 24, 0.5);
+                            text-decoration: line-through;
+                            margin-left: 3px;
+                          "
+                          >3280.00</span
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
 
-              <div class="card">
-                <div class="card-image">
-                  <img src="./Assets/expimg3.png" alt="Card 3" />
-                </div>
-                <div class="card-content">
-                  <h3 class="card-title">Kottayam</h3>
-                  <p class="card-sub">Kottayam Culinary Experience</p>
-                  <div class="card-stats">
-                    <div class="stat">
-                      <img src="./Assets//star.png" alt="" /> <span>4.3</span>
+              <a href="">
+                <div class="card">
+                  <div class="card-image">
+                    <img src="./Assets/expimg4.png" alt="Card 3" />
+                  </div>
+                  <div class="card-content">
+                    <h3 class="card-title">Kottayam</h3>
+                    <p class="card-sub">Kottayam Culinary Experience</p>
+                    <div class="card-stats">
+                      <div class="stat">
+                        <img src="./Assets//star.png" alt="" /> <span>4.3</span>
+                      </div>
+                      <div class="stat">24 Booked</div>
+                      <div class="stat">Dur: 24 Hrs</div>
                     </div>
-                    <div class="stat">24 Booked</div>
-                    <div class="stat">Dur: 24 Hrs</div>
-                  </div>
-                  <div class="price">
-                    <span>From</span>
-                    <p>
-                      Rs:2500.00
-                      <span
-                        style="
-                          color: rgba(24, 24, 24, 0.5);
-                          text-decoration: line-through;
-                          margin-left: 3px;
-                        "
-                        >3280.00</span
-                      >
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card">
-                <div class="card-image">
-                  <img src="./Assets/expimg4.png" alt="Card 3" />
-                </div>
-                <div class="card-content">
-                  <h3 class="card-title">Kottayam</h3>
-                  <p class="card-sub">Kottayam Culinary Experience</p>
-                  <div class="card-stats">
-                    <div class="stat">
-                      <img src="./Assets//star.png" alt="" /> <span>4.3</span>
+                    <div class="price">
+                      <span>From</span>
+                      <p>
+                        Rs:2500.00
+                        <span
+                          style="
+                            color: rgba(24, 24, 24, 0.5);
+                            text-decoration: line-through;
+                            margin-left: 3px;
+                          "
+                          >3280.00</span
+                        >
+                      </p>
                     </div>
-                    <div class="stat">24 Booked</div>
-                    <div class="stat">Dur: 24 Hrs</div>
-                  </div>
-                  <div class="price">
-                    <span>From</span>
-                    <p>
-                      Rs:2500.00
-                      <span
-                        style="
-                          color: rgba(24, 24, 24, 0.5);
-                          text-decoration: line-through;
-                          margin-left: 3px;
-                        "
-                        >3280.00</span
-                      >
-                    </p>
                   </div>
                 </div>
-              </div>
-
-              <div class="card">
-                <div class="card-image">
-                  <img src="./Assets/expimg2.png" alt="Card 3" />
-                </div>
-                <div class="card-content">
-                  <h3 class="card-title">Kottayam</h3>
-                  <p class="card-sub">Kottayam Culinary Experience</p>
-                  <div class="card-stats">
-                    <div class="stat">
-                      <img src="./Assets//star.png" alt="" /> <span>4.3</span>
+              </a>
+              <a href="">
+                <div class="card">
+                  <div class="card-image">
+                    <img src="./Assets/expimg2.png" alt="Card 3" />
+                  </div>
+                  <div class="card-content">
+                    <h3 class="card-title">Kottayam</h3>
+                    <p class="card-sub">Kottayam Culinary Experience</p>
+                    <div class="card-stats">
+                      <div class="stat">
+                        <img src="./Assets//star.png" alt="" /> <span>4.3</span>
+                      </div>
+                      <div class="stat">24 Booked</div>
+                      <div class="stat">Dur: 24 Hrs</div>
                     </div>
-                    <div class="stat">24 Booked</div>
-                    <div class="stat">Dur: 24 Hrs</div>
-                  </div>
-                  <div class="price">
-                    <span>From</span>
-                    <p>
-                      Rs:2500.00
-                      <span
-                        style="
-                          color: rgba(24, 24, 24, 0.5);
-                          text-decoration: line-through;
-                          margin-left: 3px;
-                        "
-                        >3280.00</span
-                      >
-                    </p>
+                    <div class="price">
+                      <span>From</span>
+                      <p>
+                        Rs:2500.00
+                        <span
+                          style="
+                            color: rgba(24, 24, 24, 0.5);
+                            text-decoration: line-through;
+                            margin-left: 3px;
+                          "
+                          >3280.00</span
+                        >
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
         </div>
@@ -368,21 +374,68 @@
             <p class="int-title">DISCOVER</p>
             <h3 class="int-sub-title">International Packages</h3>
 
-            <div class="int-cards-container">
+            <div class="int-sliders">
               <div class="int-card">
-                <img src="./Assets/intimg1.png" class="int-img" alt="" />
-                <p>Japan</p>
-                <a href=""> <img src="./Assets/intarrow.png" alt="" /> </a>
+                <a href="">
+                  <div class="int-img-wrapper">
+                    <img src="./Assets/intimg1.png" class="int-img" alt="" />
+                    <div class="int-overlay">
+                      <span class="int-overlay-text">Explore Japan</span>
+                    </div>
+                  </div>
+                  <p>Japan</p>
+                  <div class="int-arrow">
+                    <img src="./Assets/intarrow.png" alt="" />
+                  </div>
+                </a>
               </div>
+
               <div class="int-card">
-                <img src="./Assets/intimg2.png" class="int-img" alt="" />
-                <p>Australia</p>
-                <a href=""> <img src="./Assets/intarrow.png" alt="" /> </a>
+                <a href="">
+                  <div class="int-img-wrapper">
+                    <img src="./Assets/intimg2.png" class="int-img" alt="" />
+                    <div class="int-overlay">
+                      <span class="int-overlay-text">Explore Australia</span>
+                    </div>
+                  </div>
+                  <p>Australia</p>
+
+                  <div class="int-arrow">
+                    <img src="./Assets/intarrow.png" alt="" />
+                  </div>
+                </a>
               </div>
+
               <div class="int-card">
-                <img src="./Assets/intimg3.png" class="int-img" alt="" />
-                <p>Europe</p>
-                <a href=""> <img src="./Assets/intarrow.png" alt="" /> </a>
+                <a href="">
+                  <div class="int-img-wrapper">
+                    <img src="./Assets/intimg3.png" class="int-img" alt="" />
+                    <div class="int-overlay">
+                      <span class="int-overlay-text">Explore Europe</span>
+                    </div>
+                  </div>
+                  <p>Europe</p>
+
+                  <div class="int-arrow">
+                    <img src="./Assets/intarrow.png" alt="" />
+                  </div>
+                </a>
+              </div>
+
+              <div class="int-card">
+                <a href="">
+                  <div class="int-img-wrapper">
+                    <img src="./Assets/intimg2.png" class="int-img" alt="" />
+                    <div class="int-overlay">
+                      <span class="int-overlay-text">Explore Australia</span>
+                    </div>
+                  </div>
+                  <p>Australia</p>
+
+                  <div class="int-arrow">
+                    <img src="./Assets/intarrow.png" alt="" />
+                  </div>
+                </a>
               </div>
             </div>
           </div>
@@ -469,46 +522,84 @@
               </p>
             </div>
 
-            <div class="effort-card">
-              <img
-                src="./Assets/effortgrid.png"
-                class="effortgrid-img"
-                alt=""
-              />
-              <img
-                src="./Assets/effortcardimg.png"
-                class="effortcard-img"
-                alt=""
-              />
-              <div class="effort-card-content">
-                <h4>
-                  Local Community <br />
-                  engagement
-                </h4>
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book
-                </p>
+            <img
+              src="./Assets/effortbg2.png"
+              class="effortcontentbg-img"
+              alt=""
+            />
 
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book
-                </p>
+            <div class="effort-slider">
+              <div>
+                <div class="effort-card">
+                  <img
+                    src="./Assets/effortgrid.png"
+                    class="effortgrid-img"
+                    alt=""
+                  />
+                  <img
+                    src="./Assets/effortcardimg.png"
+                    class="effortcard-img"
+                    alt=""
+                  />
+                  <div class="effort-card-content">
+                    <h4>
+                      Local Community <br />
+                      engagement
+                    </h4>
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard dummy text ever since the 1500s, when an unknown
+                      printer took a galley of type and scrambled it to make a
+                      type specimen book
+                    </p>
+
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard dummy text ever since the 1500s, when an unknown
+                      printer took a galley of type and scrambled it to make a
+                      type specimen book
+                    </p>
+                  </div>
+                </div>
               </div>
 
-              <img
-                src="./Assets/effortbg2.png"
-                class="effortcardbg-img"
-                alt=""
-              />
+              <div>
+                <div class="effort-card">
+                  <img
+                    src="./Assets/effortgrid.png"
+                    class="effortgrid-img"
+                    alt=""
+                  />
+                  <img
+                    src="./Assets/effortcardimg.png"
+                    class="effortcard-img"
+                    alt=""
+                  />
+                  <div class="effort-card-content">
+                    <h4>
+                      Local Community <br />
+                      engagement
+                    </h4>
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard dummy text ever since the 1500s, when an unknown
+                      printer took a galley of type and scrambled it to make a
+                      type specimen book
+                    </p>
 
-              <div class="effortgradient-overlay"></div>
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard dummy text ever since the 1500s, when an unknown
+                      printer took a galley of type and scrambled it to make a
+                      type specimen book
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -564,86 +655,117 @@
           <p class="blog-title">Blogs</p>
 
           <div class="blog-Sliders">
-            <div class="blog-card">
-              <div class="blog-image">
-                <img src="./Assets/blogimg1.png" alt="Card 3" />
+            <a href="">
+              <div class="blog-card">
+                <div class="blog-image">
+                  <img src="./Assets/blogimg1.png" alt="Card 3" />
+                </div>
+                <div class="blog-content">
+                  <p class="blog-auther">
+                    Sujith Narayanan
+                    <span
+                      style="
+                        color: rgba(24, 24, 24, 0.5);
+                        font-size: 18px;
+                        margin-left: 5px;
+                      "
+                      >13 Dec 2018</span
+                    >
+                  </p>
+                  <h3 class="blog-des">Travel to Kerala during COVID-19</h3>
+                  <button class="blog-btn">ReadMore</button>
+                </div>
               </div>
-              <div class="blog-content">
-                <p class="blog-auther">
-                  Sujith Narayanan
-                  <span
-                    style="
-                      color: rgba(24, 24, 24, 0.5);
-                      font-size: 18px;
-                      margin-left: 5px;
-                    "
-                    >13 Dec 2018</span
-                  >
-                </p>
-                <h3 class="blog-des">Travel to Kerala during COVID-19</h3>
-                <button class="blog-btn">ReadMore</button>
+            </a>
+
+            <a href="">
+              <div class="blog-card">
+                <div class="blog-image">
+                  <img src="./Assets/blogimg2.png" alt="Card 3" />
+                </div>
+                <div class="blog-content">
+                  <p class="blog-auther">
+                    Sujith Narayanan
+                    <span
+                      style="
+                        color: rgba(24, 24, 24, 0.5);
+                        font-size: 18px;
+                        margin-left: 5px;
+                      "
+                      >13 Dec 2018</span
+                    >
+                  </p>
+                  <h3 class="blog-des">Travel to Kerala during COVID-19</h3>
+                  <button class="blog-btn">ReadMore</button>
+                </div>
               </div>
-            </div>
-            <div class="blog-card">
-              <div class="blog-image">
-                <img src="./Assets/blogimg2.png" alt="Card 3" />
+            </a>
+            <a href="">
+              <div class="blog-card">
+                <div class="blog-image">
+                  <img src="./Assets/blogimg3.png" alt="Card 3" />
+                </div>
+                <div class="blog-content">
+                  <p class="blog-auther">
+                    Sujith Narayanan
+                    <span
+                      style="
+                        color: rgba(24, 24, 24, 0.5);
+                        font-size: 18px;
+                        margin-left: 5px;
+                      "
+                      >13 Dec 2018</span
+                    >
+                  </p>
+                  <h3 class="blog-des">Travel to Kerala during COVID-19</h3>
+                  <button class="blog-btn">ReadMore</button>
+                </div>
               </div>
-              <div class="blog-content">
-                <p class="blog-auther">
-                  Sujith Narayanan
-                  <span
-                    style="
-                      color: rgba(24, 24, 24, 0.5);
-                      font-size: 18px;
-                      margin-left: 5px;
-                    "
-                    >13 Dec 2018</span
-                  >
-                </p>
-                <h3 class="blog-des">Travel to Kerala during COVID-19</h3>
-                <button class="blog-btn">ReadMore</button>
+            </a>
+            <a href="">
+              <div class="blog-card">
+                <div class="blog-image">
+                  <img src="./Assets/blogimg1.png" alt="Card 3" />
+                </div>
+                <div class="blog-content">
+                  <p class="blog-auther">
+                    Sujith Narayanan
+                    <span
+                      style="
+                        color: rgba(24, 24, 24, 0.5);
+                        font-size: 18px;
+                        margin-left: 5px;
+                      "
+                      >13 Dec 2018</span
+                    >
+                  </p>
+                  <h3 class="blog-des">Travel to Kerala during COVID-19</h3>
+                  <button class="blog-btn">ReadMore</button>
+                </div>
               </div>
-            </div>
-            <div class="blog-card">
-              <div class="blog-image">
-                <img src="./Assets/blogimg3.png" alt="Card 3" />
+            </a>
+            <a href="">
+              <div class="blog-card">
+                <div class="blog-image">
+                  <img src="./Assets/blogimg2.png" alt="Card 3" />
+                </div>
+                <div class="blog-content">
+                  <p class="blog-auther">
+                    Sujith Narayanan
+                    <span
+                      style="
+                        color: rgba(24, 24, 24, 0.5);
+                        font-size: 18px;
+                        margin-left: 5px;
+                      "
+                      >13 Dec 2018</span
+                    >
+                  </p>
+                  <h3 class="blog-des">Travel to Kerala during COVID-19</h3>
+                  <button class="blog-btn">ReadMore</button>
+                </div>
               </div>
-              <div class="blog-content">
-                <p class="blog-auther">
-                  Sujith Narayanan
-                  <span
-                    style="
-                      color: rgba(24, 24, 24, 0.5);
-                      font-size: 18px;
-                      margin-left: 5px;
-                    "
-                    >13 Dec 2018</span
-                  >
-                </p>
-                <h3 class="blog-des">Travel to Kerala during COVID-19</h3>
-                <button class="blog-btn">ReadMore</button>
-              </div>
-            </div>
-            <div class="blog-card">
-              <div class="blog-image">
-                <img src="./Assets/blogimg2.png" alt="Card 3" />
-              </div>
-              <div class="blog-content">
-                <p class="blog-auther">
-                  Sujith Narayanan
-                  <span
-                    style="
-                      color: rgba(24, 24, 24, 0.5);
-                      font-size: 18px;
-                      margin-left: 5px;
-                    "
-                    >13 Dec 2018</span
-                  >
-                </p>
-                <h3 class="blog-des">Travel to Kerala during COVID-19</h3>
-                <button class="blog-btn">ReadMore</button>
-              </div>
-            </div>
+            </a>
           </div>
         </div>
       </section>
