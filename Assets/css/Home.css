@@ -14,6 +14,7 @@ html {
   flex-direction: column;
   position: relative;
   min-height: 100vh;
+  overflow: hidden;
 }
 
 /* Navbar Styles */
@@ -69,26 +70,67 @@ html {
 
 .drawer .header {
   padding: 20px;
-  background: #333;
+   
   color: white;
   text-align: center;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
+ .header .menu-close{
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  cursor: pointer;
+ }
 #close {
   cursor: pointer;
 }
 .drawer .footer {
   margin-top: auto;
   padding: 20px;
-  background: #333;
+   width: 70%;
+   margin-inline: auto;
   color: white;
   text-align: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
 }
+
+.content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.content ul li {
+  padding-block: 20px;
+  
+  text-align: center;
+}
+.content ul li:not(:first-child) {
+   border-top: 1px solid rgba(0, 0, 0, 0.15) ;
+   border-top: 1px solid rgba(0, 0, 0, 0.15) ;
+   border-top: 1px solid rgba(0, 0, 0, 0.15) ;
+   border-top: 1px solid rgba(0, 0, 0, 0.15); 
+   border-top: 1px solid rgba(0, 0, 0, 0.15) ;
+}
+
+.content ul li a {
+  text-decoration: none;
+  color: #543030;
+  font-family: "Playfair", serif;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+ 
 
 .drawer .content {
   flex-grow: 1;
   padding: 20px;
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Backdrop Styles */
@@ -664,7 +706,7 @@ html {
   width: 82%;
   margin-inline: auto;
   margin-top: 100px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   text-align: center;
 }
 
@@ -764,7 +806,7 @@ html {
 .tree-monks::before {
   content: "";
   position: absolute;
-  top: -200px; /* Adjust according to padding */
+  top: -150px; /* Adjust according to padding */
   right: 50px;
   width: 400px;
   height: 300px;
@@ -1499,6 +1541,15 @@ html {
   transform: rotate(90deg);
 }
 
+@media only screen and (max-width: 490px) {
+  .effort-slider .slick-prev {
+   display: none !important;
+  }
+  .effort-slider .slick-next {
+  display: none !important;
+  }
+}
+
 /*blog slider */
 
 .blog-Sliders {
@@ -1566,4 +1617,195 @@ html {
   .blog-Sliders .slick-prev {
     left: 85%;
   }
+
+  .hero-text {
+    width: 100%;
+  }
+
+  #heroText1 {
+    font-size: 60px;
+  }
+
+  .story-container::before {
+    background-size: cover;
+  }
+
+  .story {
+    width: 80%;
+
+    margin-top: 60px;
+  }
+
+  .package-title {
+    padding-top: 60px;
+    width: 90%;
+    margin-inline: auto;
+  }
+
+  .title {
+    color: rgba(84, 48, 48, 1);
+    font-size: 50px;
+  }
+
+  .package-imgs {
+    height: 1000px;
+    flex-direction: column;
+  }
+
+  .experience {
+   padding-bottom: 0px;
+}
+
+.experience::before {
+  
+   
+  left: 10px;
+   
+}
+  .exp-content {
+    
+    margin-top: 80px;
+}
+  .exp-sub-title {
+    
+    font-size: 50px;
+    
+}
+
+.card{
+  border: 1px solid rgba(0, 0, 0, 0.15)
+}
+.sts1-container{
+  height: 400px;
+  padding-block: 20px;
+}
+.status1{
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.int-content{
+  margin-bottom: 0px;
+  margin-top: 80px;
+}
+.int-package::before {
+   
+  left: 10px;
+  width: 250px;
+  height: 250px;
+   
+}
+.int-img{
+  height: 350px;
+}
+.int-sub-title {
+  
+  font-size: 50px;
+  
+}
+
+.tree-monks  {
+   padding-bottom: 10px;
+  
+}
+.tree-monks::before {
+   
+  top: -150px;
+  right: 10px;
+  width: 250px;
+  height: 250px;
+  
+}
+
+.monk-card {
+   
+  padding: 30px 20px;
+  flex-direction: column;
+}
+
+.monk-card .card-left {
+  text-align: center;
+}
+
+.gallery-container {
+ margin-top: 50px;
+  width: 80vw;
+}
+
+.effort-container {
+   
+  padding-top: 50px;
+  
+}
+
+.effort-title h3 {
+  
+  font-size: 50px;
+  
+}
+
+.effort-title p {
+ 
+  width: 80%;
+   
+}
+
+.effort-card .effortgrid-img {
+  
+  z-index: -1;
+}
+
+.effort-card {
+  width: 80%;
+   
+  flex-direction: column;
+}
+
+.effort-container::before {
+   
+  top: 50px;
+   
+}
+
+.effort-para2{
+  display: none;
+}
+
+.effort-card .effortcard-img{
+ height: 350px;
+}
+
+.sts2-container {
+   
+  height: 300px;
+   
+  padding-block: 30px;
+}
+
+.sts2-content {
+  flex-direction: column;
+  gap: 10px;
+ justify-content: space-around;
+}
+
+.blog-title {
+   
+  font-size: 50px;
+   
+}
+
+.sub-content h4 {
+  font-size: 50px;
+  width: 90%;
+  margin-inline: auto;
+  
+}
+.sub{
+  height: 350px;
+}
+.sub-form {
+   
+  width: 90%;
+  margin-inline: auto;
+}
 }

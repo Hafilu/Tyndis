@@ -10,6 +10,7 @@ $(".landing-Sliders").slick({
   cssEase: "ease-in-out",
   cssEase: "cubic-bezier(0.7, 0, 0.3, 1)",
   responsive: [
+    
     {
       breakpoint: 1030,
       settings: { slidesToShow: 3, slidesToScroll: 1 },
