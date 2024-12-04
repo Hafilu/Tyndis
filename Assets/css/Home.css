@@ -1828,7 +1828,7 @@ html {
   }
 }
 
-@media (min-width: 1300px) and (max-width: 1400px) {
+@media (min-width: 1024px) and (max-width: 1450px) {
   .blog-Sliders .slick-prev {
     left: 94%;
   }
@@ -1836,5 +1836,78 @@ html {
     flex-direction: column;
     align-items: start;
     gap: 10px;
+  }
+
+  .int-package::before {
+    left: 25px;
+    width: 300px;
+    height: 300px;
+    top: 35px;
+  }
+
+  .experience::before {
+    top: -30px;
+    left: 50px;
+    width: 200px;
+    height: 200px;
+  }
+
+  .effort-container::before {
+    left: 0%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .story {
+    width: 70%;
+  }
+
+  .int-content {
+    width: 75%;
+  }
+
+  .int-package::before {
+    left: 0px;
+    width: 300px;
+    height: 300px;
+    top: 80px;
+  }
+
+  .experience::before {
+    top: -20px;
+    left: -5px;
+    width: 200px;
+    height: 200px;
+  }
+
+  .sub-form {
+    width: 70%;
+    margin-inline: auto;
+  }
+
+  .effort-card .effortgrid-img {
+    z-index: -1;
+  }
+
+  .effort-card {
+    width: 80%;
+
+    flex-direction: column;
+  }
+
+  .effort-container::before {
+    top: 50px;
+  }
+
+  .effort-slider .slick-prev {
+    display: none !important;
+  }
+  .effort-slider .slick-next {
+    display: none !important;
+  }
+
+  .footer-content {
+    width: 90%;
+    justify-items: start;
   }
 }

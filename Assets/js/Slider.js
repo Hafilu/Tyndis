@@ -83,6 +83,22 @@ $(".effort-slider").slick({
   cssEase: "cubic-bezier(0.7, 0, 0.3, 1)",
   responsive: [
     {
+      breakpoint: 1300,
+      settings: { slidesToShow: 1.01, slidesToScroll: 1 },
+    },
+    {
+      breakpoint: 992,
+      settings: { slidesToShow: 1.01, slidesToScroll: 1 },
+    },
+    {
+      breakpoint: 960,
+      settings: { slidesToShow: 1.01, slidesToScroll: 1 },
+    },
+    {
+      breakpoint: 765,
+      settings: { slidesToShow: 1.01, slidesToScroll: 1 },
+    },
+    {
       breakpoint: 540,
       settings: { slidesToShow: 1.01, slidesToScroll: 1 },
     },
