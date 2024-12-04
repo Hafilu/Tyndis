@@ -1855,7 +1855,10 @@ html {
   .effort-container::before {
     left: 0%;
   }
-
+  .effort-card .effortgrid-img {
+    width: 130px;
+    height: 130px;
+  }
   .sub-form {
     width: 40%;
     margin-inline: auto;
