@@ -73,7 +73,7 @@ $(".effort-slider").slick({
   vertical: true,
   verticalSwiping: true,
   infinite: true,
-  slidesToShow: 1,
+  slidesToShow: 1.025,
   slidesToScroll: 1,
   autoplay: true,
   dots: false,
@@ -82,6 +82,13 @@ $(".effort-slider").slick({
   pauseOnFocus: false,
   cssEase: "ease-in-out",
   cssEase: "cubic-bezier(0.7, 0, 0.3, 1)",
+  responsive: [
+     
+    {
+      breakpoint: 540,
+      settings: { slidesToShow: 1.01, slidesToScroll: 1 },
+    },
+  ],
 });
 
 $(".blog-Sliders").slick({
