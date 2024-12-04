@@ -1867,6 +1867,13 @@ html {
     width: 70%;
   }
 
+  .overlay-text .overlay-desc {
+    margin-left: 20px;
+  }
+
+  .overlay-text img {
+    margin-right: 20px;
+  }
   .int-content {
     width: 75%;
   }
