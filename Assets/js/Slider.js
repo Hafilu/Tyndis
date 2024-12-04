@@ -10,7 +10,6 @@ $(".landing-Sliders").slick({
   cssEase: "ease-in-out",
   cssEase: "cubic-bezier(0.7, 0, 0.3, 1)",
   responsive: [
-    
     {
       breakpoint: 1030,
       settings: { slidesToShow: 3, slidesToScroll: 1 },
@@ -73,7 +72,7 @@ $(".effort-slider").slick({
   vertical: true,
   verticalSwiping: true,
   infinite: true,
-  slidesToShow: 1.025,
+  slidesToShow: 1.03,
   slidesToScroll: 1,
   autoplay: true,
   dots: false,
@@ -83,7 +82,6 @@ $(".effort-slider").slick({
   cssEase: "ease-in-out",
   cssEase: "cubic-bezier(0.7, 0, 0.3, 1)",
   responsive: [
-     
     {
       breakpoint: 540,
       settings: { slidesToShow: 1.01, slidesToScroll: 1 },
@@ -104,7 +102,7 @@ $(".blog-Sliders").slick({
   cssEase: "cubic-bezier(0.7, 0, 0.3, 1)",
   responsive: [
     {
-      breakpoint: 1030,
+      breakpoint: 1300,
       settings: { slidesToShow: 3, slidesToScroll: 1 },
     },
     {
