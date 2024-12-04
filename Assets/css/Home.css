@@ -1855,6 +1855,11 @@ html {
   .effort-container::before {
     left: 0%;
   }
+
+  .sub-form {
+    width: 40%;
+    margin-inline: auto;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
