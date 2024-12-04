@@ -960,24 +960,25 @@ html {
   position: relative;
   width: 100%;
   padding-top: 100px;
+  padding-bottom: 50px;
   margin-top: 20px;
   background-color: rgba(242, 238, 226, 0.9); /* Background color */
 
   box-sizing: border-box;
 }
 
-.effort-container::before {
+/* .effort-container::before {
   content: "";
   position: absolute;
-  top: 50%; /* Adjust according to padding */
+  top: 50%;  
   left: 40px;
   width: 200px;
   height: 200px;
   background: url("../effortbg1.png") no-repeat;
-  background-size: cover; /* Ensure image fits the specified dimensions */
-  opacity: 0.6; /* Control transparency of the image */
-  z-index: 0; /* Place behind the content */
-}
+  background-size: cover; 
+  opacity: 0.6;  
+  z-index: 0;  
+} */
 
 .effort-container > * {
   position: relative;
@@ -990,9 +991,19 @@ html {
 
 .effort-content .effortcontentbg-img {
   position: absolute;
-  bottom: 0;
+  bottom: -100px;
   right: 5%;
   width: 300px;
+  z-index: 1;
+  opacity: 0.7;
+}
+
+.effort-content .effortbg-img {
+  position: absolute;
+  bottom: 100px;
+  left: 40px;
+  width: 200px;
+  height: 200px;
   z-index: 1;
   opacity: 0.7;
 }
@@ -1036,7 +1047,7 @@ html {
 .effort-card .effortcard-img {
   width: 100%;
   object-fit: cover;
-  height: 370px;
+  height: 400px;
   border-radius: 10px; /* Ensure rounded corners */
   display: block; /* Prevent extra spacing below images caused by inline display */
 }
@@ -1501,69 +1512,6 @@ html {
   background-image: url("../expNext.png");
 }
 
-/* sustainable effort slider */
-
-.effort-slider {
-  overflow: hidden;
-  padding: 50px 0 100px 0;
-}
-
-.effort-slider .slick-slide {
-  margin: 0 6px;
-}
-.effort-slider .slick-list {
-  margin: 0 -6px;
-}
-.effort-slider .slick-arrow[aria-disabled="true"] {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-.effort-slider .slick-dots {
-  display: none !important;
-}
-.effort-slider .slick-arrow {
-  position: absolute;
-  content: "";
-  z-index: 9;
-  width: 30px;
-  height: 30px;
-  transform: translate(-50%, -50%);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  text-indent: -9999px;
-}
-.effort-slider .slick-arrow::before {
-  content: "";
-}
-.effort-slider .slick-prev {
-  top: 40%;
-  bottom: inherit;
-  left: calc(100% - 130px);
-  right: inherit;
-  background-size: cover;
-  background-image: url("../expPrev.png");
-  transform: rotate(90deg);
-}
-.effort-slider .slick-next {
-  top: calc(40% -30px);
-  bottom: inherit;
-  right: 100px;
-  left: inherit;
-  background-size: cover;
-  background-image: url("../expNext.png");
-  transform: rotate(90deg);
-}
-
-@media only screen and (max-width: 490px) {
-  .effort-slider .slick-prev {
-    display: none !important;
-  }
-  .effort-slider .slick-next {
-    display: none !important;
-  }
-}
-
 /*blog slider */
 
 .blog-Sliders {
@@ -1771,8 +1719,13 @@ html {
     flex-direction: column;
   }
 
-  .effort-container::before {
+  /* .effort-container::before {
     top: 50px;
+  } */
+
+  .effort-content .effortbg-img {
+    top: 0;
+    left: 0;
   }
 
   .effort-para2 {
@@ -1852,9 +1805,14 @@ html {
     height: 200px;
   }
 
-  .effort-container::before {
+  /* .effort-container::before {
     left: 0%;
+  } */
+
+  .effort-content .effortbg-img {
+    left: 0;
   }
+
   .effort-card .effortgrid-img {
     width: 130px;
     height: 130px;
@@ -1910,19 +1868,33 @@ html {
     flex-direction: column;
   }
 
-  .effort-container::before {
+  /* .effort-container::before {
     top: 50px;
-  }
+  } */
 
-  .effort-slider .slick-prev {
-    display: none !important;
-  }
-  .effort-slider .slick-next {
-    display: none !important;
+  .effort-content .effortbg-img {
+    top: 0;
+    left: 0;
   }
 
   .footer-content {
     width: 90%;
     justify-items: start;
+  }
+}
+
+.stack-cards {
+  margin-block: 50px;
+}
+
+.stack-cards__item {
+  position: sticky;
+  top: 100px;
+  transform-origin: center top;
+}
+
+@media only screen and (max-width: 490px) {
+  .stack-cards__item {
+    top: 50px;
   }
 }
