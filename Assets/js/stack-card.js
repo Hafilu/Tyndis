@@ -368,7 +368,7 @@ Math.easeInOutQuad = function (t, b, c, d) {
     for(var i = 0; i < this.items.length; i++) { // use only scale
       var scrolling = this.cardTop - top - i*(this.cardHeight+this.marginY);
       if(scrolling > 0) {  
-        var scaling = i == this.items.length - 1 ? 1 : (this.cardHeight - scrolling*0.06)/this.cardHeight;
+        var scaling = i == this.items.length - 1 ? 1 : (this.cardHeight - scrolling*0.03)/this.cardHeight;
         this.items[i].style.transform = 'translateY('+this.marginY*i+'px) scale('+scaling+')';
       } else {
         this.items[i].style.transform = 'translateY('+this.marginY*i+'px)';
