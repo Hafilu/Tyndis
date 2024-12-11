@@ -68,6 +68,18 @@ html {
   right: 0;
 }
 
+.drawer .drawer-logo{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.drawer-logo img{
+  width: 100px;
+  height: 65px;
+  object-fit: cover;
+}
+
 .drawer .header {
   padding: 20px;
 
@@ -252,21 +264,31 @@ html {
 .story-container {
   position: relative; /* Ensure proper stacking for the overlay */
   z-index: 10; /* Place behind the content */
+  overflow: hidden;
 }
 
 .story-container::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: 30%;
   left: 0;
-  width: 100%;
+  width: 50%;
   height: 100%;
-  background: url("../storybg.png") no-repeat;
+  background: url("../storybg2.png") no-repeat;
   background-size: contain; /* Ensure image fits the specified dimensions */
-  opacity: 0.5; /* Adjust this value for the desired transparency */
+  opacity: 0.7; /* Adjust this value for the desired transparency */
   z-index: -1; /* Ensure the overlay is behind the content */
 }
+  .storybgimg{
+  position: absolute;
+  right:  -100px;
+  top: 50px;
+  opacity: 0.6;
+   width: 500px;
+  height: 100%;
+  object-fit: contain;
 
+}
 .story {
   width: 50%;
   text-align: center;
@@ -687,7 +709,7 @@ html {
   content: "";
   position: absolute;
   top: -30px;
-  left: 0px;
+  left: -10px;
   width: 450px;
   height: 450px;
   background: url("../discoverbg.png") no-repeat;
@@ -1810,12 +1832,7 @@ html {
     gap: 10px;
   }
 
-  .int-package::before {
-    left: 25px;
-    width: 300px;
-    height: 300px;
-    top: 35px;
-  }
+ 
 
   .experience::before {
     top: -30px;
