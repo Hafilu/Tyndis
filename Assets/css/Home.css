@@ -714,6 +714,7 @@ html {
   height: 450px;
   background: url("../discoverbg.png") no-repeat;
   background-size: contain;
+  opacity: 0.8;
 }
 
 .int-package > * {
@@ -761,7 +762,7 @@ html {
   font-size: 22px;
   font-family: "Figtree", sans-serif;
   margin-block: 25px;
-  font-weight: 500;
+  font-weight: 400;
   color: rgba(24, 24, 24, 1);
 }
 
@@ -773,7 +774,7 @@ html {
   display: block;
   width: 100%;
 
-  height: 450px;
+  height: 430px;
 
   object-fit: cover;
 }
@@ -1491,7 +1492,7 @@ html {
 }
 
 .int-sliders .slick-slide {
-  margin: 0 10px;
+  margin: 0 12px;
 }
 .int-sliders .slick-list {
   margin: 0 -6px;
