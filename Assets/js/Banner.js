@@ -41,7 +41,6 @@ const imageSrcs = [
   "./Assets/banner.jpeg",
   "./Assets/banner.jpeg",
   "./Assets/banner.jpeg",
-  
 ]; // Image files
 
 // State variables
@@ -126,3 +125,43 @@ playPauseBtn.addEventListener("click", () => {
 // Initial Render
 updateBackground();
 updateHero();
+
+// JavaScript for scroll effect
+document.addEventListener("DOMContentLoaded", () => {
+  const navbar = document.getElementById("navbar");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+      // Adjust scroll threshold as needed
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const imageItems = document.querySelectorAll(".package-image-item");
+
+  // Check if the user is on mobile
+  const isMobile = window.matchMedia("(max-width: 767px)").matches;
+
+  if (isMobile) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view");
+          } else {
+            entry.target.classList.remove("in-view");
+          }
+        });
+      },
+      {
+        threshold: 0.9, // Adjust visibility threshold as needed
+      }
+    );
+
+    imageItems.forEach((item) => observer.observe(item));
+  }
+});
