@@ -781,9 +781,23 @@ html {
   position: relative;
   display: inline-block;
   overflow: hidden;
-
   text-align: center; /* Center content */
   padding-bottom: 15px;
+  background: none;
+  transition: transform 0.3s ease, background-color 0.3s ease,
+    box-shadow 0.3s ease, opacity 0.3s ease; /* Smooth transition for all effects */
+}
+ 
+
+.int-card:hover {
+  background-color: rgba(
+    246,
+    244,
+    236,
+    1
+  ); /* Changes the background color on hover */
+  transform: scale(1.01); /* Slightly scales up the card */
+  box-shadow: 0px 0px 5px 5px rgba(116, 129, 179, 0.17); /* Adds a subtle shadow */
 }
 
 .int-card p {
@@ -828,7 +842,7 @@ html {
   opacity: 0;
 }
 
-.int-img-wrapper:hover .int-overlay-text {
+.int-card:hover .int-overlay-text {
   opacity: 1;
 }
 
