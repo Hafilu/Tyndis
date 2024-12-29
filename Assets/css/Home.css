@@ -1763,7 +1763,8 @@ html {
   .status1 {
     flex-direction: column;
     justify-content: space-around;
-    align-items: center;
+    align-items: start;
+    width: 85%;
   }
   .int-content {
     width: 82%;

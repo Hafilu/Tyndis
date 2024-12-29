@@ -140,28 +140,89 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const imageItems = document.querySelectorAll(".package-image-item");
+// document.addEventListener("DOMContentLoaded", () => {
+//   const imageItems = document.querySelectorAll(".package-image-item");
 
-  // Check if the user is on mobile
-  const isMobile = window.matchMedia("(max-width: 767px)").matches;
+//   // Check if the user is on mobile
+//   const isMobile = window.matchMedia("(max-width: 767px)").matches;
 
-  if (isMobile) {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("in-view");
-          } else {
-            entry.target.classList.remove("in-view");
-          }
-        });
-      },
-      {
-        threshold: 0.9, // Adjust visibility threshold as needed
-      }
-    );
+//   if (isMobile) {
+//     const observer = new IntersectionObserver(
+//       (entries) => {
+//         entries.forEach((entry) => {
+//           if (entry.isIntersecting) {
+//             entry.target.classList.add("in-view");
+//           } else {
+//             entry.target.classList.remove("in-view");
+//           }
+//         });
+//       },
+//       {
+//         threshold: 0.9, // Adjust visibility threshold as needed
+//       }
+//     );
 
-    imageItems.forEach((item) => observer.observe(item));
-  }
-});
+//     imageItems.forEach((item) => observer.observe(item));
+//   }
+// });
+
+
+// let debounceTimeout;
+// const cards = document.querySelectorAll(".package-image-item");
+
+
+// const isMobile = window.matchMedia("(max-width: 767px)").matches;
+// if (isMobile) {
+// const debounceScroll = () => {
+//   clearTimeout(debounceTimeout);
+//   debounceTimeout = setTimeout(() => {
+//     checkVisibility();
+//   }, 50); // Delay to debounce the scroll events
+// };
+
+// const checkVisibility = () => {
+//   cards.forEach((card) => {
+//     const rect = card.getBoundingClientRect();
+//     const isVisible = rect.top >= 0 && rect.top <= window.innerHeight * 0.6;
+
+//     if (isVisible) {
+//       card.classList.add('in-view');
+//     } else {
+//       card.classList.remove('in-view');
+//     }
+//   });
+// };
+
+// window.addEventListener('scroll', debounceScroll);
+// }
+
+
+let throttleTimeout;
+const cards = document.querySelectorAll('.package-image-item');
+
+const isMobile = window.matchMedia("(max-width: 767px)").matches;
+if (isMobile) {
+const throttleScroll = () => {
+  if (throttleTimeout) return;
+
+  throttleTimeout = setTimeout(() => {
+    checkVisibility();
+    throttleTimeout = null;
+  }, 100); // Delay to throttle the scroll events
+};
+
+const checkVisibility = () => {
+  cards.forEach((card, index) => {
+    const rect = card.getBoundingClientRect();
+    const isVisible = rect.top >= 0 && rect.top <= window.innerHeight * 0.5; // 90% of the card visible
+
+    if (isVisible) {
+      card.classList.add('in-view');
+    } else {
+      card.classList.remove('in-view');
+    }
+  });
+};
+
+window.addEventListener('scroll', throttleScroll);
+}
