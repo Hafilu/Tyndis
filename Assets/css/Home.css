@@ -460,6 +460,8 @@ html {
   font-size: 18px;
   margin-top: 5px;
   opacity: 0;
+  text-align: left;
+  transition: opacity 0.3s ease-in-out;
 }
 
 /* Desktop Hover Styles */
@@ -1125,9 +1127,12 @@ html {
   height: 130px;
   border-top-right-radius: 13px;
 }
-
+.effort-img-container{
+width: 35%;
+}
 .effort-card-content {
   padding: 20px;
+  width: 65%;
 }
 
 .effort-card-content h4 {
@@ -1834,7 +1839,13 @@ html {
 
   .effort-card-content {
     padding-top: 0;
+    width: 100%;
   }
+
+  .effort-img-container{
+    width: 100%;
+    }
+    
   /* .effort-container::before {
     top: 50px;
   } */
