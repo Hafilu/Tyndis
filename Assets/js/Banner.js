@@ -59,7 +59,7 @@ const playPauseBtn = document.getElementById("playPauseBtn");
 function updateBackground() {
   background.innerHTML = ""; // Clear existing content
 
-  if (playStatus) {
+  if (!playStatus) {
     // Show the video
     const video = document.createElement("video");
     video.src = videoSrc;
@@ -67,6 +67,9 @@ function updateBackground() {
     video.muted = true;
     video.loop = true;
     video.className = "fade-in";
+    video.controls = true; // Adds the controls attribute
+    video.setAttribute("playsinline", ""); // Adds playsinline
+    video.setAttribute("webkit-playsinline", ""); // Adds webkit-playsinline
     background.appendChild(video);
     stopInterval(); // Stop the interval when the video is playing
   } else {
@@ -117,8 +120,8 @@ dots.forEach((dot) => {
 playPauseBtn.addEventListener("click", () => {
   playStatus = !playStatus;
   playPauseBtn.src = playStatus
-    ? "./Assets/pause_icon.png"
-    : "./Assets/play_icon.png";
+    ? "./Assets/play_icon.png"
+    : "./Assets/pause_icon.png";
   updateBackground();
 });
 
@@ -166,10 +169,8 @@ document.addEventListener("DOMContentLoaded", () => {
 //   }
 // });
 
-
 // let debounceTimeout;
 // const cards = document.querySelectorAll(".package-image-item");
-
 
 // const isMobile = window.matchMedia("(max-width: 767px)").matches;
 // if (isMobile) {
@@ -196,33 +197,32 @@ document.addEventListener("DOMContentLoaded", () => {
 // window.addEventListener('scroll', debounceScroll);
 // }
 
-
 let throttleTimeout;
-const cards = document.querySelectorAll('.package-image-item');
+const cards = document.querySelectorAll(".package-image-item");
 
 const isMobile = window.matchMedia("(max-width: 767px)").matches;
 if (isMobile) {
-const throttleScroll = () => {
-  if (throttleTimeout) return;
+  const throttleScroll = () => {
+    if (throttleTimeout) return;
 
-  throttleTimeout = setTimeout(() => {
-    checkVisibility();
-    throttleTimeout = null;
-  }, 100); // Delay to throttle the scroll events
-};
+    throttleTimeout = setTimeout(() => {
+      checkVisibility();
+      throttleTimeout = null;
+    }, 100); // Delay to throttle the scroll events
+  };
 
-const checkVisibility = () => {
-  cards.forEach((card, index) => {
-    const rect = card.getBoundingClientRect();
-    const isVisible = rect.top >= 0 && rect.top <= window.innerHeight * 0.5; // 90% of the card visible
+  const checkVisibility = () => {
+    cards.forEach((card, index) => {
+      const rect = card.getBoundingClientRect();
+      const isVisible = rect.top >= 0 && rect.top <= window.innerHeight * 0.5; // 90% of the card visible
 
-    if (isVisible) {
-      card.classList.add('in-view');
-    } else {
-      card.classList.remove('in-view');
-    }
-  });
-};
+      if (isVisible) {
+        card.classList.add("in-view");
+      } else {
+        card.classList.remove("in-view");
+      }
+    });
+  };
 
-window.addEventListener('scroll', throttleScroll);
+  window.addEventListener("scroll", throttleScroll);
 }

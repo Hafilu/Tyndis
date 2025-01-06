@@ -791,16 +791,7 @@ html {
 }
  
 
-.int-card:hover {
-  background-color: rgba(
-    246,
-    244,
-    236,
-    1
-  ); /* Changes the background color on hover */
-  transform: scale(1.01); /* Slightly scales up the card */
-  box-shadow: 0px 0px 5px 5px rgba(116, 129, 179, 0.17); /* Adds a subtle shadow */
-}
+
 
 .int-card p {
   font-size: 22px;
@@ -844,9 +835,47 @@ html {
   opacity: 0;
 }
 
-.int-card:hover .int-overlay-text {
-  opacity: 1;
+
+
+
+
+
+/* Desktop Hover Styles */
+@media (min-width: 768px) {
+  .int-card:hover {
+    background-color: rgba(
+      246,
+      244,
+      236,
+      1
+    ); /* Changes the background color on hover */
+    transform: scale(1.01); /* Slightly scales up the card */
+    box-shadow: 0px 0px 5px 5px rgba(116, 129, 179, 0.17); /* Adds a subtle shadow */
+  }
+  
+  .int-card:hover .int-overlay-text {
+    opacity: 1;
+  }
 }
+
+/* Mobile In-View Styles */
+@media (max-width: 767px) {
+  .int-card {
+    background-color: rgba(
+      246,
+      244,
+      236,
+      1
+    ); /* Changes the background color on hover */
+    transform: scale(1.01); /* Slightly scales up the card */
+    box-shadow: 0px 0px 5px 5px rgba(116, 129, 179, 0.17); /* Adds a subtle shadow */
+  }
+  
+  .int-card  .int-overlay-text {
+    opacity: 1;
+  }
+}
+
 
 .int-card a {
   text-decoration: none;
