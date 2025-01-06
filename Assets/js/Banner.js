@@ -67,9 +67,8 @@ function updateBackground() {
     video.muted = true;
     video.loop = true;
     video.className = "fade-in";
-    video.controls = true; // Adds the controls attribute
-    video.setAttribute("playsinline", ""); // Adds playsinline
-    video.setAttribute("webkit-playsinline", ""); // Adds webkit-playsinline
+    video.controls = false; // Adds the controls attribute
+    video.playsInline = true; // Adds playsinline
     background.appendChild(video);
     stopInterval(); // Stop the interval when the video is playing
   } else {
