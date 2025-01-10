@@ -205,6 +205,14 @@ html {
   height: 100%;
   object-fit: cover;
 }
+
+ 
+.control-btns .volume-btn{
+  margin-right: 20px;
+}
+.d-none{
+  display: none;
+}
 .fade-in {
   animation: fadeIn 0.5s ease-in-out;
 }
@@ -1753,6 +1761,9 @@ html {
     z-index: 1001;
   }
 
+  .control-btns{
+    margin-bottom: 0px;
+  }
   .blog-Sliders .slick-prev {
     left: 85%;
   }

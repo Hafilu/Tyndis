@@ -54,7 +54,7 @@ const heroText1 = document.getElementById("heroText1");
 const heroText2 = document.getElementById("heroText2");
 const dots = document.querySelectorAll(".dot");
 const playPauseBtn = document.getElementById("playPauseBtn");
-
+const volumeBtn = document.getElementById("volumeBtn");
 // Update Background
 function updateBackground() {
   background.innerHTML = ""; // Clear existing content
@@ -62,7 +62,7 @@ function updateBackground() {
   if (!playStatus) {
     // Show the video
     const video = document.createElement("video");
-    video.src = videoSrc;
+    video.src = "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4";
     video.autoplay = true;
     video.muted = true;
     video.loop = true;
@@ -70,6 +70,7 @@ function updateBackground() {
     video.controls = false; // Adds the controls attribute
     video.playsInline = true; // Adds playsinline
     background.appendChild(video);
+    volumeBtn.src = "./Assets/unmute.png"
     stopInterval(); // Stop the interval when the video is playing
   } else {
     // Show the images
@@ -117,11 +118,39 @@ dots.forEach((dot) => {
 
 // Play/Pause Handler
 playPauseBtn.addEventListener("click", () => {
+  
   playStatus = !playStatus;
+  // const video = background.querySelector("video");
   playPauseBtn.src = playStatus
     ? "./Assets/play_icon.png"
     : "./Assets/pause_icon.png";
+   
+    // if (video) {
+    //   video.muted = playStatus ? false : true; // Toggle the muted state
+    // } 
+    if (playStatus) {
+      console.log("add");
+       volumeBtn.classList.add(  "d-none")
+    }else{
+      volumeBtn.classList.remove( 'd-none') // Update button text
+      console.log("remove");
+    }
+    // Update button text
+    
+    
   updateBackground();
+});
+
+
+// mute/unmute Handler
+volumeBtn.addEventListener("click", () => {
+  const video = background.querySelector("video");
+  if (video) {
+    video.muted = !video.muted; // Toggle the muted state
+    volumeBtn.src = video.muted ? "./Assets/unmute.png" : "./Assets/mute.png"; // Update button text
+    
+  }
+  
 });
 
 // Initial Render
@@ -225,3 +254,7 @@ if (isMobile) {
 
   window.addEventListener("scroll", throttleScroll);
 }
+
+
+
+
