@@ -1,0 +1,1387 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <title>About Page</title>
+    <style>
+      @font-face {
+        font-family: "Semplicita Pro";
+        src: url("./Assets/css/SemplicitaPro.otf") format("opentype");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+      }
+
+      .section-container {
+        width: 88%;
+        margin-inline: auto;
+      }
+      .about-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        column-gap: 100px;
+        position: relative;
+      }
+
+      .about-container::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: -5%;
+        width: 550px;
+        height: 400px;
+        background-image: url("./Assets/about-imgs/aboutbg.png"); /* Replace with your background image */
+        background-size: cover;
+        background-position: center;
+        opacity: 1;
+        z-index: -1;
+      }
+      .title {
+        color: rgba(84, 48, 48, 1);
+        font-size: 70px;
+        font-family: "Playfair", serif;
+        margin: 0px;
+        font-weight: 500;
+      }
+      .left-section {
+        width: 35%;
+      }
+
+      .left-section img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        margin-top: 50px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .right-section {
+        flex: 1;
+        width: 65%;
+
+        color: #333;
+      }
+
+      .right-section h2 {
+        font-family: "Playfair Display", serif;
+        font-size: 2.5em;
+        margin-bottom: 10px;
+      }
+
+      .sub-title {
+        color: #181818b2;
+        font-size: 30px;
+        font-weight: 400;
+        font-family: "Figtree", sans-serif;
+      }
+
+      .right-section p {
+        color: #181818b2;
+        font-size: 18px;
+        font-weight: 400;
+        font-family: "Figtree", sans-serif;
+        line-height: 25px;
+      }
+
+      /* counter section */
+
+      .counter-container {
+        width: 88%;
+        margin-inline: auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-block: 15px;
+      }
+
+      .counter {
+        text-align: center;
+        color: #333;
+      }
+      .counter-num {
+        display: flex;
+        justify-content: center;
+      }
+
+      .counter-one {
+        justify-content: left;
+      }
+      .counter h3 {
+        font-size: 45px;
+        font-weight: 600;
+        font-family: "Figtree", sans-serif;
+        margin-block: 20px;
+        margin-bottom: 0px;
+        color: rgba(84, 48, 48, 1);
+      }
+
+      .counter p {
+        font-size: 25px;
+        font-family: "Playfair", serif;
+        margin-block: 20px;
+
+        font-weight: 500;
+        color: rgba(84, 48, 48, 1);
+      }
+
+      /* photos sliders */
+
+      .tyndis-photos {
+        position: relative;
+        width: 100%;
+
+        background-color: white; /* Background color */
+        padding-bottom: 30px;
+        box-sizing: border-box;
+      }
+
+      .tyndis-photos::before {
+        content: "";
+        position: absolute;
+        top: -50px; /* Adjust according to padding */
+        left: 200px;
+        width: 180px;
+        height: 180px;
+        background: url("./Assets//about-imgs/expbg.png") no-repeat;
+        background-size: contain; /* Ensure image fits the specified dimensions */
+        opacity: 0.2; /* Control transparency of the image */
+        z-index: 0; /* Place behind the content */
+        transform: rotate(-10deg);
+      }
+
+      .tyndis-photos > * {
+        position: relative;
+        z-index: 1; /* Ensure content is above the image */
+      }
+      .photos-slider {
+        width: 88%;
+        margin-inline: auto;
+      }
+      .photos-content {
+        text-align: center;
+        margin-top: 100px;
+      }
+
+      .photos-title {
+        font-size: 26px;
+        font-family: "Figtree", sans-serif;
+        margin: 0px;
+        font-weight: 500;
+        color: rgba(159, 159, 159, 1);
+      }
+
+      .photos-sub-title {
+        color: rgba(84, 48, 48, 1);
+
+        font-size: 70px;
+        font-family: "Playfair", serif;
+        margin-block: 10px;
+        font-weight: 500;
+      }
+
+      /*landing slider */
+
+      .photos-Sliders {
+        padding: 50px 0;
+      }
+      .photos-Sliders .slick-track {
+        display: flex !important;
+        align-items: end !important;
+      }
+
+      .photos-Sliders .slick-slide {
+        margin: 0 6px;
+      }
+      .photos-Sliders .slick-list {
+        margin: 0 -6px;
+      }
+      .photos-Sliders .slick-arrow[aria-disabled="true"] {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+      .photos-Sliders .slick-dots {
+        display: none !important;
+      }
+      .photos-Sliders .slick-arrow {
+        position: absolute;
+        content: "";
+        z-index: 9;
+        width: 30px;
+        height: 30px;
+        transform: translate(-50%, -50%);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        text-indent: -9999px;
+      }
+      .photos-Sliders .slick-arrow::before {
+        content: "";
+      }
+      .photos-Sliders .slick-prev {
+        top: 40%;
+        bottom: inherit;
+        left: 0%;
+        right: inherit;
+        background-size: cover;
+        background-image: url("../expPrev.png");
+      }
+      .photos-Sliders .slick-next {
+        top: 40%;
+        bottom: inherit;
+        right: -30px;
+        left: inherit;
+        background-size: cover;
+        background-image: url("../expNext.png");
+      }
+
+      /* sts2 */
+
+      .sts2-container {
+        position: relative; /* Enable layering for the pseudo-element */
+        background-color: rgba(
+          242,
+          238,
+          226,
+          0.9
+        ); /* Base background color with transparency */
+        width: 82%;
+        margin-inline: auto;
+        border-radius: 15px;
+        height: 250px;
+        z-index: 0; /* Place behind the content */
+        margin-block: 40px;
+        overflow: hidden; /* Prevent pseudo-element overflow */
+      }
+
+      .sts2-container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url("./Assets/about-imgs/stsbg2.png") no-repeat center;
+        background-size: contain; /* Ensure the image fits the dimensions */
+        opacity: 0.6; /* Adjust for the desired transparency */
+        z-index: -1; /* Place the image behind the content */
+        border-radius: 15px; /* Match the container's border radius */
+      }
+
+      .sts2-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        gap: 150px;
+        width: 100%;
+      }
+
+      .sts2-count {
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        gap: 10px;
+        color: rgba(84, 48, 48, 1);
+        font-family: "Figtree", sans-serif;
+      }
+
+      .sts2-count .sts2-img {
+        width: 40px;
+        height: 40px;
+        background-color: white;
+        border-radius: 10px;
+        padding: 15px;
+      }
+
+      .sts2-count p {
+        margin: 0px;
+      }
+
+      .count-num {
+        margin: 0px;
+        font-size: 22px;
+        font-weight: bold;
+        padding-block: 10px;
+      }
+
+      /* what we do */
+
+      .work-container {
+        width: 82%;
+        margin-inline: auto;
+        margin-top: 70px;
+        text-align: center;
+      }
+
+      .work-items {
+        display: flex;
+        column-gap: 40px;
+        padding-top: 50px;
+      }
+
+      .work-item h4 {
+        font-size: 25px;
+        font-family: "Playfair", serif;
+        margin-block: 10px;
+        font-weight: 500;
+        color: rgba(24, 24, 24, 1);
+      }
+
+      .work-item p {
+        font-size: 18px;
+        font-family: "Figtree", sans-serif;
+        margin: 0px;
+        font-weight: 400;
+        color: rgba(24, 24, 24, 0.7);
+      }
+
+      /* team */
+
+      .team-container {
+        width: 88%;
+        margin-inline: auto;
+        margin-top: 90px;
+      }
+
+      .team-items {
+        position: relative; /* Enable layering for the pseudo-element */
+        margin-top: 30px;
+        overflow: hidden; /* Prevent pseudo-element overflow */
+      }
+
+      .team-items::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url("./Assets/about-imgs/teambg.png") no-repeat center;
+        background-size: contain; /* Ensure the image fits the dimensions */
+        opacity: 1; /* Adjust for the desired transparency */
+        z-index: -1; /* Place the image behind the content */
+      }
+
+      .team-item .team-member {
+        width: 250px;
+        height: 230px;
+        object-fit: cover;
+      }
+
+      .team-item h2 {
+        font-size: 22px;
+        font-family: "Figtree", sans-serif;
+
+        font-weight: 400;
+        color: rgba(24, 24, 24, 1);
+        margin-bottom: 5px;
+      }
+
+      .team-item p {
+        font-size: 18px;
+        font-family: "Figtree", sans-serif;
+        font-weight: 400;
+        color: rgba(38, 39, 48, 0.7);
+        width: 85%;
+        margin-top: 5px;
+      }
+
+      /* status 1 */
+
+      .sts1-container {
+        position: relative; /* Ensure proper positioning for the overlay */
+        width: 100%;
+        height: 250px;
+        margin: 20px 0 50px 0px;
+        z-index: 0; /* Place behind the content */
+        background-color: rgba(
+          242,
+          238,
+          226,
+          0.9
+        ); /* Base background color with opacity */
+        overflow: hidden; /* Prevent pseudo-element overflow */
+      }
+
+      .sts1-container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url("./Assets/about-imgs/status1bg.png") no-repeat center;
+        background-size: cover; /* Ensure the image fits the specified dimensions */
+        opacity: 0.5; /* Adjust for the desired transparency */
+        z-index: -1; /* Ensure it's behind the content */
+      }
+
+      .status1 {
+        width: 75%;
+        margin-inline: auto;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .sts-count {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        color: rgba(84, 48, 48, 1);
+        font-family: "Figtree", sans-serif;
+      }
+
+      .sts-count .sts1-img {
+        width: 40px;
+        height: 40px;
+        background-color: white;
+        border-radius: 10px;
+        padding: 15px;
+      }
+
+      .sts-count p {
+        margin: 0px;
+      }
+      .about-sts-number {
+        margin: 0px;
+        font-size: 22px;
+        font-weight: bold;
+        padding-block: 10px;
+      }
+
+      .about-sts-val {
+        margin: 0px;
+        font-size: 22px;
+        font-weight: bold;
+        padding-block: 10px;
+      }
+
+      /* mentors */
+
+      .mentors {
+        position: relative;
+        width: 80%;
+        margin-inline: auto;
+        background-color: white; /* Background color */
+        padding-bottom: 30px;
+        box-sizing: border-box;
+        margin-top: 80px;
+      }
+
+      .mentors::before {
+        content: "";
+        position: absolute;
+        top: -10px; /* Adjust according to padding */
+        left: -150px;
+        width: 270px;
+        height: 270px;
+        background: url("./Assets/about-imgs/compus.png") no-repeat;
+        background-size: contain; /* Ensure image fits the specified dimensions */
+        opacity: 1; /* Control transparency of the image */
+        z-index: 0; /* Place behind the content */
+      }
+
+      .mentor-item {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+      }
+      .mentor-item img {
+        width: 205px;
+        height: 205px;
+        object-fit: cover;
+      }
+
+      .mentor-item h4 {
+        font-size: 22px;
+        font-family: "Figtree", sans-serif;
+        margin-bottom: 10px;
+        font-weight: 400;
+        color: rgba(24, 24, 24, 1);
+        text-align: center;
+      }
+
+      .mentor-item p {
+        font-size: 18px;
+        font-family: "Figtree", sans-serif;
+        font-weight: 400;
+        color: rgba(38, 39, 48, 0.7);
+        width: 85%;
+        margin: 0px;
+        text-align: center;
+      }
+
+      .mentor-items {
+        text-align: center;
+      }
+
+      /* mentor sliders */
+
+      .mentor-Sliders {
+        padding: 50px 0;
+      }
+
+      .mentor-Sliders .slick-slide {
+        margin: 0 6px;
+      }
+      .mentor-Sliders .slick-list {
+        margin: 0 -6px;
+      }
+      .mentor-Sliders .slick-arrow[aria-disabled="true"] {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+      .mentor-Sliders .slick-dots {
+        display: none !important;
+      }
+      .mentor-Sliders .slick-arrow {
+        position: absolute;
+        content: "";
+        z-index: 9;
+        width: 30px;
+        height: 30px;
+        transform: translate(-50%, -50%);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        text-indent: -9999px;
+      }
+      .mentor-Sliders .slick-arrow::before {
+        content: "";
+      }
+      .mentor-Sliders .slick-prev {
+        top: -40px;
+        bottom: inherit;
+        right: 10px;
+        left: inherit;
+        background-size: cover;
+        background-image: url("./Assets/about-imgs/expPrev.png");
+      }
+      .mentor-Sliders .slick-next {
+        top: -40px;
+        bottom: inherit;
+        right: -30px;
+        left: inherit;
+        background-size: cover;
+        background-image: url("./Assets/about-imgs/expNext.png");
+      }
+
+      /* testimonial */
+      .testimonial-container {
+        width: 80%;
+        margin-inline: auto;
+        text-align: center;
+        margin-top: 30px;
+      }
+
+      .testimonial-card {
+        background-color: rgba(242, 238, 226, 0.5);
+        border-radius: 10px;
+        padding-inline: 20px;
+        text-align: left;
+      }
+
+      .testimonial-card p {
+        font-size: 18px;
+        font-family: "Figtree", sans-serif;
+        font-weight: 400;
+        color: rgba(24, 24, 24, 0.7);
+        line-height: 25px;
+      }
+      .testimonial-des {
+        display: flex;
+        align-items: center;
+        padding-bottom: 10px;
+      }
+
+      .testimonial-des img {
+        width: 55px;
+        height: 55px;
+        border-radius: 100%;
+        object-fit: cover;
+        margin-right: 15px;
+      }
+
+      .testimonial-des h4 {
+        font-size: 18px;
+        font-family: "Figtree", sans-serif;
+        font-weight: 500;
+        color: rgba(24, 24, 24, 1);
+        margin-block: 10px;
+      }
+
+      .testimonial-des p {
+        font-size: 16px;
+        font-family: "Figtree", sans-serif;
+        font-weight: 400;
+        color: rgba(24, 24, 24, 0.5);
+        margin-block: 10px;
+      }
+
+      /* video section */
+
+      .video-container {
+        width: 80%;
+        margin-inline: auto;
+        margin-top: 40px;
+        display: flex;
+        column-gap: 70px;
+      }
+
+      .video-left-section {
+        flex: 1;
+        min-width: 300px;
+        margin-block: auto;
+      }
+
+      .video-left-section h2 {
+        font-size: 70px;
+        font-family: "Playfair", serif;
+        margin-block: 10px;
+        font-weight: 500;
+        line-height: 70px;
+        color: rgba(84, 48, 48, 1);
+      }
+
+      .video-left-section p {
+        font-size: 18px;
+        font-family: "Figtree", sans-serif;
+        font-weight: 400;
+        line-height: 30px;
+        color: rgba(24, 24, 24, 0.7);
+      }
+
+      .video-right-section {
+        flex: 1;
+        min-width: 300px;
+
+        position: relative;
+      }
+
+      .video-wrapper {
+        position: relative;
+        height: 350px;
+        overflow: hidden; /* Ensures no overflow */
+      }
+
+      video {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        object-fit: cover; /* Ensures the video fills the area without stretching */
+        display: block; /* Make sure it's visible */
+      }
+
+      .pause-image {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+      }
+
+      .controls img {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 100%;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 10;
+      }
+      @media (max-width: 768px) {
+        .title{
+            font-size: 50px;
+        }
+        .about-container {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .left-section img {
+          height: 400px;
+        }
+
+        .about-container::after {
+          top: 50%;
+        }
+        .left-section {
+          width: 100%;
+        }
+        .right-section {
+          width: 100%;
+          margin-top: 20px;
+        }
+        .photos-sub-title {
+    
+    font-size: 50px;
+     
+}
+        .counter-container {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .counter-one {
+          justify-content: center;
+        }
+
+        .sts2-container {
+          height: 300px;
+          width: 90%;
+          padding-block: 30px;
+        }
+
+        .sts2-content {
+          flex-direction: column;
+          gap: 10px;
+          justify-content: space-around;
+        }
+
+        .work-items {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+.team-container h2{
+    text-align: center;
+}
+.team-item{
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
+
+.team-item p{
+    text-align: center;
+}
+
+.video-container {
+    flex-direction: column;
+}
+
+.video-wrapper {
+    
+    height: 300px;
+     
+}
+
+.sts1-container {
+    height: 400px;
+    padding-block: 20px;
+}
+.status1 {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+    width: 85%;
+}
+.mentors {
+    
+    width: 90%;
+    
+}
+
+.mentor-Sliders .slick-prev {
+        top: -30px;
+       
+      }
+      .mentor-Sliders .slick-next {
+        top: -30px;
+       
+      }
+
+      .video-left-section h2 {
+    font-size: 50px;
+   
+}
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <!-- about section -->
+      <div class="section-container">
+        <hr style="border-color: rgba(0, 0, 0, 0.09); margin-bottom: 70px" />
+        <div class="about-container">
+          <div class="left-section">
+            <h2 class="title">About Us</h2>
+            <img src="./Assets/about-imgs/aboutimg.png" alt="About Image" />
+            <!-- Replace with your image -->
+          </div>
+          <div class="right-section">
+            <h3 class="sub-title">
+              ‘Tyndis Travel’ nurtured the concept <br />
+              of responsible tourism.
+            </h3>
+            <p>
+              Almost all well-known travel agencies create mass packages for
+              tourists. Backed with a decade of experience working for one such
+              company, Naveen got together with his team to lovingly nurture the
+              concept of responsible tourism through their baby ‘Tyndis
+              Travel’. Initiated in 2018,The dual purpose of this initiative is
+              to impart unique travel experiences to tourists visiting South
+              India and uplift the local community. 
+            </p>
+
+            <p>
+              Our journey so far has truly been an incredible one! As a team, we
+              are obsessed with the idea of empowering travelers by unfolding
+              the stories of the places we take them to. We suggest boarding
+              facilities depending on the traveler’s interest. From a
+              backpacker’s needs to a honeymooner’s demands, from a cultural
+              enthusiast to a culinary buff, we tailor-make thoughtfully crafted
+              itineraries for tourists .
+            </p>
+
+            <p>
+              Besides entertaining tourists, we cater to the exclusive needs of
+              corporates. We handpick mood-elevating venues for workations ,
+              Curate corporate travel tours for senior management , Conduct
+              leisure team picnics and Execute annual meets, conferences, and
+              offsite corporate events with the utmost professionalism.Tyndis
+              Travel has a passionate team that strives together to be Earth's
+              best travel firm. We craft vacations and events that guarantee
+              personalized memories for a lifetime. Probably, this is the reason
+              why we have customers come back to us year after year or recommend
+              us to their friends and family .
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- counter section -->
+
+      <div class="counter-section">
+        <hr
+          style="
+            border-color: rgba(0, 0, 0, 0.09);
+            margin-bottom: 20px;
+            margin-top: 80px;
+          "
+        />
+        <div class="counter-container">
+          <div class="counter">
+            <div class="counter-num counter-one">
+              <h3 class="sts-number">100</h3>
+              <h3>+</h3>
+            </div>
+
+            <p>Story telling tours</p>
+          </div>
+          <div class="counter">
+            <div class="counter-num">
+              <h3 class="sts-number">10  </h3>
+              <h3>k+</h3>
+            </div>
+            <p>Happy Customers </p>
+          </div>
+          <div class="counter">
+            <div class="counter-num">
+              <h3 class="sts-number">280</h3>
+              <h3>+</h3>
+            </div>
+            <p>Corporates & Startups </p>
+          </div>
+          <div class="counter">
+            <div class="counter-num">
+              <h3 class="sts-number">99</h3>
+              <h3>%</h3>
+            </div>
+            <p>Excellent reviews from 3K Ratings. </p>
+          </div>
+        </div>
+      </div>
+
+      <hr style="border-color: rgba(0, 0, 0, 0.09); margin-top: 20px" />
+
+      <!-- photo slider -->
+
+      <section>
+        <div class="tyndis-photos">
+          <div class="photos-slider">
+            <div class="photos-content">
+              <!-- <p class="exp-title">DISCOVER THE</p> -->
+              <h3 class="photos-sub-title">Life at Tyndis Photos</h3>
+            </div>
+
+            <div class="photos-Sliders">
+              <img src="./Assets/about-imgs/photo1.png" alt="" />
+              <img src="./Assets/about-imgs/photo2.png" alt="" />
+              <img src="./Assets/about-imgs/photo3.png" alt="" />
+              <img src="./Assets/about-imgs/photo4.png" alt="" />
+              <img src="./Assets/about-imgs/photo2.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- status section 1 -->
+
+      <section>
+        <div class="sts2-container">
+          <div class="sts2-content">
+            <div class="sts2-count">
+              <img
+                src="./Assets/about-imgs/tripadvisor.png"
+                class="sts2-img"
+                alt=""
+              />
+              <div>
+                <p>TripAdvisor</p>
+                <div style="display: flex; align-items: center">
+                  <p class="sts-number count-num" style="width: 38px">100</p>
+                  <p class="sts-val count-num">+</p>
+                  <p style="font-size: 14px">Five Star Reviews</p>
+                </div>
+
+                <img
+                  src="./Assets/about-imgs/5star.png"
+                  style="margin-block: 5px"
+                  alt=""
+                />
+              </div>
+            </div>
+
+            <div class="sts2-count">
+              <img
+                src="./Assets/about-imgs/google.png"
+                class="sts2-img"
+                alt=""
+              />
+              <div>
+                <p>Google</p>
+                <div style="display: flex; align-items: center">
+                  <p class="sts-number count-num" style="width: 28px">70</p>
+                  <p class="sts-val count-num">+</p>
+                  <p style="font-size: 14px">Five Star Reviews</p>
+                </div>
+
+                <img
+                  src="./Assets/about-imgs/5star.png"
+                  style="margin-block: 5px"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- what we do -->
+
+      <section class="work-container">
+        <h2 class="title">What we do</h2>
+        <div class="work-items">
+          <div class="work-item">
+            <img src="./Assets/about-imgs/heart.png" alt="" />
+            <h4>Heading</h4>
+            <p>
+              But also the leap into electronic typesetting, remaining
+              essentially unchanged. It was popularised in the 1960s with the
+              release of Letraset sheets containing Lorem Ipsum passages, and
+              more recently with desktop 
+            </p>
+          </div>
+
+          <div class="work-item">
+            <img src="./Assets/about-imgs/heart.png" alt="" />
+            <h4>Heading</h4>
+            <p>
+              But also the leap into electronic typesetting, remaining
+              essentially unchanged. It was popularised in the 1960s with the
+              release of Letraset sheets containing Lorem Ipsum passages, and
+              more recently with desktop 
+            </p>
+          </div>
+          <div class="work-item">
+            <img src="./Assets/about-imgs/heart.png" alt="" />
+            <h4>Heading</h4>
+            <p>
+              But also the leap into electronic typesetting, remaining
+              essentially unchanged. It was popularised in the 1960s with the
+              release of Letraset sheets containing Lorem Ipsum passages, and
+              more recently with desktop 
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- team container -->
+
+      <section class="team-container">
+        <h2 class="title">Our Team</h2>
+        <div class="team-items photos-Sliders">
+          <div class="team-item">
+            <img
+              src="./Assets/about-imgs/team1.png"
+              class="team-member"
+              alt=""
+            />
+            <h2>Name Goes Here</h2>
+            <p>Name Goes Here</p>
+            <img src="./Assets/about-imgs/quote.png" alt="" />
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
+          </div>
+
+          <div class="team-item">
+            <img
+              src="./Assets/about-imgs/team2.png"
+              class="team-member"
+              alt=""
+            />
+            <h2>Name Goes Here</h2>
+            <p>Name Goes Here</p>
+            <img src="./Assets/about-imgs/quote.png" alt="" />
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
+          </div>
+
+          <div class="team-item">
+            <img
+              src="./Assets/about-imgs/team3.png"
+              class="team-member"
+              alt=""
+            />
+            <h2>Name Goes Here</h2>
+            <p>Name Goes Here</p>
+            <img src="./Assets/about-imgs/quote.png" alt="" />
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
+          </div>
+
+          <div class="team-item">
+            <img
+              src="./Assets/about-imgs/team4.png"
+              class="team-member"
+              alt=""
+            />
+            <h2>Name Goes Here</h2>
+            <p>Name Goes Here</p>
+            <img src="./Assets/about-imgs/quote.png" alt="" />
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
+          </div>
+
+          <div class="team-item">
+            <img
+              src="./Assets/about-imgs/team2.png"
+              class="team-member"
+              alt=""
+            />
+            <h2>Name Goes Here</h2>
+            <p>Name Goes Here</p>
+            <img src="./Assets/about-imgs/quote.png" alt="" />
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- status 2 -->
+
+      <section>
+        <div class="sts1-container">
+          <div class="status1">
+            <div class="sts-count">
+              <img
+                src="./Assets/about-imgs/stsheart.png"
+                class="sts1-img"
+                alt=""
+              />
+              <div>
+                <div style="display: flex; align-items: center">
+                  <p class="about-sts-number">123</p>
+                  <p class="about-sts-val">k</p>
+                </div>
+
+                <p>Happy Travellers</p>
+              </div>
+            </div>
+
+            <div class="sts-count">
+              <img
+                src="./Assets/about-imgs/stsstar.png"
+                class="sts1-img"
+                alt=""
+              />
+              <div>
+                <div style="display: flex; align-items: center">
+                  <p class="about-sts-number">400</p>
+                  <p class="about-sts-val">+</p>
+                </div>
+                <p>Five Star Ratings</p>
+              </div>
+            </div>
+
+            <div class="sts-count">
+              <img
+                src="./Assets/about-imgs/stsdesti.png"
+                class="sts1-img"
+                alt=""
+              />
+              <div>
+                <div style="display: flex; align-items: center">
+                  <p class="about-sts-number">200</p>
+                  <p class="about-sts-val">+</p>
+                </div>
+                <p>Curated Toures</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- mentors section -->
+
+      <section class="mentors">
+        <h2 class="title">Our Mentors</h2>
+        <div class="mentor-Sliders">
+          <div class="mentor-item">
+            <img src="./Assets/about-imgs/mentor1.png" alt="" />
+
+            <h4>RAMESH BABU</h4>
+            <p>Retd. Navy Captain</p>
+          </div>
+
+          <div class="mentor-item">
+            <img src="./Assets/about-imgs/mentor2.png" alt="" />
+
+            <h4>C K RAMACHANDRAN</h4>
+            <p>Retd. IAS Officer</p>
+          </div>
+
+          <div class="mentor-item">
+            <img src="./Assets/about-imgs/mentor3.png" alt="" />
+
+            <h4>MOHANDAS P</h4>
+            <p>Historian</p>
+          </div>
+
+          <div class="mentor-item">
+            <img src="./Assets/about-imgs/mentor4.png" alt="" />
+
+            <h4>RAJEEV PALLIKKONAM</h4>
+            <p>Artist & Historian</p>
+          </div>
+
+          <div class="mentor-item">
+            <img src="./Assets/about-imgs/mentor2.png" alt="" />
+
+            <h4>C K RAMACHANDRAN</h4>
+            <p>Retd. IAS Officer</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- testimonial section -->
+
+      <section class="testimonial-container">
+        <h2 class="title">Testimonials</h2>
+        <div class="photos-Sliders">
+          <div class="testimonial-card">
+            <p>14/02/2025</p>
+            <img src="./Assets/5star.png" alt="" />
+            <p>
+              The tours in this website are great. I had been really enjoy with
+              my family! The team is very professional and taking care of the
+              customers. Will surely recommend to my freind to join this
+              company!
+            </p>
+            <div class="testimonial-des">
+              <img src="./Assets/about-imgs/testi1.png" alt="" />
+              <div>
+                <h4>Shane H. Hartley</h4>
+                <p>Retd. IAS Officer</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <p>14/02/2025</p>
+            <img src="./Assets/5star.png" alt="" />
+            <p>
+              The tours in this website are great. I had been really enjoy with
+              my family! The team is very professional and taking care of the
+              customers. Will surely recommend to my freind to join this
+              company!
+            </p>
+            <div class="testimonial-des">
+              <img src="./Assets/about-imgs/testi2.png" alt="" />
+              <div>
+                <h4>Shane H. Hartley</h4>
+                <p>Retd. IAS Officer</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <p>14/02/2025</p>
+            <img src="./Assets/5star.png" alt="" />
+            <p>
+              The tours in this website are great. I had been really enjoy with
+              my family! The team is very professional and taking care of the
+              customers. Will surely recommend to my freind to join this
+              company!
+            </p>
+            <div class="testimonial-des">
+              <img src="./Assets/about-imgs/testi3.png" alt="" />
+              <div>
+                <h4>Shane H. Hartley</h4>
+                <p>Retd. IAS Officer</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <p>14/02/2025</p>
+            <img src="./Assets/5star.png" alt="" />
+            <p>
+              The tours in this website are great. I had been really enjoy with
+              my family! The team is very professional and taking care of the
+              customers. Will surely recommend to my freind to join this
+              company!
+            </p>
+            <div class="testimonial-des">
+              <img src="./Assets/about-imgs/testi4.png" alt="" />
+              <div>
+                <h4>Shane H. Hartley</h4>
+                <p>Retd. IAS Officer</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <p>14/02/2025</p>
+            <img src="./Assets/5star.png" alt="" />
+            <p>
+              The tours in this website are great. I had been really enjoy with
+              my family! The team is very professional and taking care of the
+              customers. Will surely recommend to my freind to join this
+              company!
+            </p>
+            <div class="testimonial-des">
+              <img src="./Assets/about-imgs/testi2.png" alt="" />
+              <div>
+                <h4>Shane H. Hartley</h4>
+                <p>Retd. IAS Officer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- video section -->
+      <section>
+        <div class="video-container">
+          <!-- Left Section -->
+          <div class="video-left-section">
+            <h2>
+              Get the best <br />
+              Experiance
+            </h2>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard.
+            </p>
+          </div>
+
+          <!-- Right Section -->
+          <div class="video-right-section">
+            <div class="video-wrapper">
+              <!-- Pause Image -->
+              <img
+                id="pauseImage"
+                src="./Assets/about-imgs/video.png"
+                alt="Paused Image"
+                class="pause-image"
+              />
+              <!-- Video Element -->
+              <video id="video" src="./Assets/about-imgs/video1.mp4"></video>
+              <div class="controls" onclick="togglePlayPause()">
+                <img src="./Assets/about-imgs/pause.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script>
+      const video = document.getElementById("video");
+      const pauseImage = document.getElementById("pauseImage");
+
+      function togglePlayPause() {
+        if (video.paused) {
+          video.style.display = "block";
+          pauseImage.style.display = "none";
+          video.play();
+        } else {
+          video.pause();
+          video.style.display = "block"; /* Ensure it remains visible */
+          pauseImage.style.display = "block";
+        }
+      }
+    </script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script type="text/javascript" src="./Assets/js/Slider.js"></script>
+    <script type="text/javascript" src="./Assets/js/Counter.js"></script>
+  </body>
+</html>
