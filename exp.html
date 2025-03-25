@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <title>Experiance Page</title>
+
+    <style>
+      @font-face {
+        font-family: "Semplicita Pro";
+        src: url("./Assets/css/SemplicitaPro.otf") format("opentype");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+      }
+
+      .section-container {
+        width: 88%;
+        margin-inline: auto;
+        position: relative;
+      }
+      .section-container::after {
+        content: "";
+        position: absolute;
+        top: 0px;
+        right: 0;
+        width: 450px;
+        height: 350px;
+        background-image: url("./Assets/exp-imgs/discoverbg.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: right;
+        opacity: 0.5;
+        z-index: -1;
+      }
+
+      .title {
+        color: rgba(84, 48, 48, 1);
+        font-size: 70px;
+        font-family: "Playfair", serif;
+        margin: 0px;
+        font-weight: 500;
+      }
+
+      .breadcrumb {
+        margin-top: 20px;
+        margin-bottom: 30px;
+      }
+
+      .breadcrumb a {
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 500;
+
+        font-family: "Figtree", sans-serif;
+      }
+
+      .exp-container {
+        width: 88%;
+        margin-inline: auto;
+        margin-top: 70px;
+      }
+
+      .exp-list-container {
+        display: flex;
+        width: 100%;
+        gap: 20px;
+      }
+
+      .exp-list-left {
+        width: 20%;
+
+        box-sizing: border-box;
+      }
+
+      .exp-list-right {
+        width: 80%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+      .exp-card {
+        transition: background-color 0.3s, box-shadow 0.3s;
+      }
+      .exp-card:hover {
+        background-color: rgba(242, 238, 226, 0.9);
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s, box-shadow 0.3s;
+      }
+
+      .exp-des {
+        padding-inline: 10px;
+      }
+      .exp-card .exp-img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+      .exp-card p {
+        color: rgba(84, 48, 48, 1);
+        font-size: 18px;
+        font-weight: 500;
+        font-family: "Figtree", sans-serif;
+      }
+      .exp-star-date,
+      .exp-btn,
+      .exp-price {
+        margin-block: 15px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .exp-star-date span,
+      .exp-price span {
+        font-size: 16px;
+        font-weight: 500;
+        font-family: "Figtree", sans-serif;
+        color: rgba(24, 24, 24, 1);
+      }
+
+      .exp-star-date img {
+        height: 15px;
+      }
+
+      .exp-btn span {
+        font-size: 16px;
+        font-weight: 400;
+        font-family: "Figtree", sans-serif;
+        color: rgba(84, 48, 48, 1);
+        background-color: rgba(84, 48, 48, 0.15);
+        padding: 7px;
+        border-radius: 5px;
+      }
+      .disc-price {
+        color: rgba(163, 163, 163, 1) !important;
+        text-decoration: line-through;
+      }
+
+      @media (min-width: 768px) and (max-width: 1024px) {
+        .exp-list-right {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .exp-list-container {
+          flex-direction: column;
+        }
+
+        .exp-list-left,
+        .exp-list-right {
+          width: 100%;
+        }
+      }
+
+      @media (max-width: 767px) {
+        .title {
+          font-size: 50px;
+        }
+        .exp-list-container {
+          flex-direction: column;
+        }
+
+        .exp-list-left {
+          width: 100%;
+          margin-bottom: 20px;
+        }
+
+        .exp-list-right {
+          width: 100%;
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .category strong {
+        font-size: 30px;
+        font-family: "Playfair", serif;
+        color: rgba(24, 24, 24, 1);
+        font-weight: 500;
+      }
+
+      .category p {
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: 500;
+        color: rgba(0, 0, 0, 1);
+        font-family: "Figtree", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="section-container">
+      <hr style="border-color: rgba(0, 0, 0, 0.09); margin-bottom: 60px" />
+
+      <h1 class="title">Experiance</h1>
+      <div class="breadcrumb">
+        <a href="/index.html" style="color: rgba(24, 24, 24, 0.6)">Home</a>
+        <a
+          href="/exp.html"
+          style="color: rgba(24, 24, 24, 1); margin-left: 10px"
+          >Experience</a
+        >
+      </div>
+    </div>
+    <div class="exp-container">
+      <div class="exp-list-container">
+        <div class="exp-list-left">
+          <div class="category">
+            <strong>CATEGORIES</strong>
+            <p>All</p>
+            <p>Art and Culture</p>
+            <p>Heritage</p>
+            <p>Nature Love</p>
+            <p>Food & Drink</p>
+            <p>Adventures</p>
+            <p>Storytelling Tours</p>
+          </div>
+        </div>
+        <div class="exp-list-right">
+          <div class="exp-card">
+            <img src="./Assets/exp-imgs/exp1.png" class="exp-img" alt="" />
+            <div class="exp-des">
+              <p>Fort Kochi Instagrammable Tour</p>
+
+              <div class="exp-star-date">
+                <img src="./Assets/exp-imgs/5star.png" alt="" />
+                <span>| 15 Booked</span>
+                <span>| Dur: 3 Hours</span>
+              </div>
+
+              <div class="exp-btn">
+                <span>Street Walk</span>
+                <span>Photography Tour</span>
+              </div>
+
+              <div class="exp-price">
+                <span
+                  >From
+                  <img src="./Assets/exp-imgs/rupee.png" alt="" /> 3000.00</span
+                >
+                <span class="disc-price">200.00</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="exp-card">
+            <img src="./Assets/exp-imgs/exp2.png" class="exp-img" alt="" />
+            <div class="exp-des">
+              <p>Fort Kochi Instagrammable Tour</p>
+
+              <div class="exp-star-date">
+                <img src="./Assets/exp-imgs/5star.png" alt="" />
+                <span>| 15 Booked</span>
+                <span>| Dur: 3 Hours</span>
+              </div>
+
+              <div class="exp-btn">
+                <span>Street Walk</span>
+                <span>Photography Tour</span>
+              </div>
+
+              <div class="exp-price">
+                <span
+                  >From
+                  <img src="./Assets/exp-imgs/rupee.png" alt="" /> 3000.00</span
+                >
+                <span class="disc-price">200.00</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="exp-card">
+            <img src="./Assets/exp-imgs/exp3.png" class="exp-img" alt="" />
+            <div class="exp-des">
+              <p>Fort Kochi Instagrammable Tour</p>
+
+              <div class="exp-star-date">
+                <img src="./Assets/exp-imgs/5star.png" alt="" />
+                <span>| 15 Booked</span>
+                <span>| Dur: 3 Hours</span>
+              </div>
+
+              <div class="exp-btn">
+                <span>Street Walk</span>
+                <span>Photography Tour</span>
+              </div>
+
+              <div class="exp-price">
+                <span
+                  >From
+                  <img src="./Assets/exp-imgs/rupee.png" alt="" /> 3000.00</span
+                >
+                <span class="disc-price">200.00</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="exp-card">
+            <img src="./Assets/exp-imgs/exp4.png" class="exp-img" alt="" />
+            <div class="exp-des">
+              <p>Fort Kochi Instagrammable Tour</p>
+
+              <div class="exp-star-date">
+                <img src="./Assets/exp-imgs/5star.png" alt="" />
+                <span>| 15 Booked</span>
+                <span>| Dur: 3 Hours</span>
+              </div>
+
+              <div class="exp-btn">
+                <span>Street Walk</span>
+                <span>Photography Tour</span>
+              </div>
+
+              <div class="exp-price">
+                <span
+                  >From
+                  <img src="./Assets/exp-imgs/rupee.png" alt="" /> 3000.00</span
+                >
+                <span class="disc-price">200.00</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="exp-card">
+            <img src="./Assets/exp-imgs/exp5.png" class="exp-img" alt="" />
+            <div class="exp-des">
+              <p>Fort Kochi Instagrammable Tour</p>
+
+              <div class="exp-star-date">
+                <img src="./Assets/exp-imgs/5star.png" alt="" />
+                <span>| 15 Booked</span>
+                <span>| Dur: 3 Hours</span>
+              </div>
+
+              <div class="exp-btn">
+                <span>Street Walk</span>
+                <span>Photography Tour</span>
+              </div>
+
+              <div class="exp-price">
+                <span
+                  >From
+                  <img src="./Assets/exp-imgs/rupee.png" alt="" /> 3000.00</span
+                >
+                <span class="disc-price">200.00</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="exp-card">
+            <img src="./Assets/exp-imgs/exp6.png" class="exp-img" alt="" />
+            <div class="exp-des">
+              <p>Fort Kochi Instagrammable Tour</p>
+
+              <div class="exp-star-date">
+                <img src="./Assets/exp-imgs/5star.png" alt="" />
+                <span>| 15 Booked</span>
+                <span>| Dur: 3 Hours</span>
+              </div>
+
+              <div class="exp-btn">
+                <span>Street Walk</span>
+                <span>Photography Tour</span>
+              </div>
+
+              <div class="exp-price">
+                <span
+                  >From
+                  <img src="./Assets/exp-imgs/rupee.png" alt="" /> 3000.00</span
+                >
+                <span class="disc-price">200.00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
