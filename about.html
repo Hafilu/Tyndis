@@ -654,86 +654,81 @@
         margin-block: 10px;
       }
 
-      /* video section */
+      /* brand slider */
 
-      .video-container {
-        width: 80%;
+      .brand-container {
+        width: 88%;
         margin-inline: auto;
-        margin-top: 40px;
+        margin-top: 50px;
+      }
+      .brand-card {
+        height: 300px;
+        position: relative;
+        color: white;
+      
         display: flex;
-        column-gap: 70px;
-      }
-
-      .video-left-section {
-        flex: 1;
-        min-width: 300px;
-        margin-block: auto;
-      }
-
-      .video-left-section h2 {
-        font-size: 70px;
-        font-family: "Playfair", serif;
-        margin-block: 10px;
-        font-weight: 500;
-        line-height: 70px;
-        color: rgba(84, 48, 48, 1);
-      }
-
-      .video-left-section p {
-        font-size: 18px;
-        font-family: "Figtree", sans-serif;
-        font-weight: 400;
-        line-height: 30px;
-        color: rgba(24, 24, 24, 0.7);
-      }
-
-      .video-right-section {
-        flex: 1;
-        min-width: 300px;
-
-        position: relative;
-      }
-
-      .video-wrapper {
-        position: relative;
-        height: 350px;
-        overflow: hidden; /* Ensures no overflow */
-      }
-
-      video {
-        width: 100%;
-        height: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 25px;
+        overflow: hidden;
         border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        object-fit: cover; /* Ensures the video fills the area without stretching */
-        display: block; /* Make sure it's visible */
+        text-decoration: none;
       }
-
-      .pause-image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        display: block;
+      .brand-card::before {
+        content: "";
         position: absolute;
         top: 0;
         left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
         z-index: 1;
       }
-
-      .controls img {
+      .brand-card-bg {
         position: absolute;
-        bottom: 10px;
-        right: 10px;
-        width: 100px;
-        height: 100px;
-        object-fit: cover;
-        border-radius: 100%;
-        color: white;
-        border-radius: 5px;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("./Assets/about-imgs/aboutimg.png");
+        background-size: cover;
+        background-position: center;
+        transition: transform 0.3s ease-in-out;
+      }
+      .brand-card:hover .brand-card-bg {
+        transform: scale(1.15);
+      }
+      .brand-card-content {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: space-between;
+        height: 100%;
+      }
+
+      .brand-card-title {
+        font-size: 24px;
+        font-family: "Figtree", sans-serif;
+
+        font-weight: 500;
+
+        margin-bottom: 20px;
+      }
+      .brand-card-description {
+        font-size: 18px;
+        font-family: "Figtree", sans-serif;
+        font-weight: 400;
+
+        margin-top: 5px;
+      }
+      .view-more {
         cursor: pointer;
-        z-index: 10;
+        font-size: 16px;
+margin-bottom: 10px;
+        align-self: flex-start;
+        font-family: "Figtree", sans-serif;
       }
 
       @media (max-width: 1024px) {
@@ -903,7 +898,7 @@
 
       <!-- counter section -->
 
-      <div class="counter-section">
+      <!-- <div class="counter-section">
         <hr
           style="
             border-color: rgba(0, 0, 0, 0.09);
@@ -942,9 +937,61 @@
             <p>Excellent reviews from 3K Ratings. </p>
           </div>
         </div>
-      </div>
+      </div> -->
 
-      <hr style="border-color: rgba(0, 0, 0, 0.09); margin-top: 20px" />
+      <!-- status 2 -->
+
+      <section style="margin-bottom: 20px; margin-top: 80px">
+        <div class="sts1-container">
+          <div class="status1">
+            <div class="sts-count">
+              <img
+                src="./Assets/about-imgs/stsheart.png"
+                class="sts1-img"
+                alt=""
+              />
+              <div>
+                <div style="display: flex; align-items: center">
+                  <p class="about-sts-number">123</p>
+                  <p class="about-sts-val">k</p>
+                </div>
+
+                <p>Happy Travellers</p>
+              </div>
+            </div>
+
+            <div class="sts-count">
+              <img
+                src="./Assets/about-imgs/stsstar.png"
+                class="sts1-img"
+                alt=""
+              />
+              <div>
+                <div style="display: flex; align-items: center">
+                  <p class="about-sts-number">400</p>
+                  <p class="about-sts-val">+</p>
+                </div>
+                <p>Five Star Ratings</p>
+              </div>
+            </div>
+
+            <div class="sts-count">
+              <img
+                src="./Assets/about-imgs/stsdesti.png"
+                class="sts1-img"
+                alt=""
+              />
+              <div>
+                <div style="display: flex; align-items: center">
+                  <p class="about-sts-number">200</p>
+                  <p class="about-sts-val">+</p>
+                </div>
+                <p>Curated Toures</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- photo slider -->
 
@@ -963,6 +1010,87 @@
               <img src="./Assets/about-imgs/photo4.png" alt="" />
               <img src="./Assets/about-imgs/photo2.png" alt="" />
             </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- what we do -->
+
+      <section class="work-container">
+        <h2 class="title">What we do</h2>
+        <div class="work-items">
+          <div class="work-item">
+            <img src="./Assets/about-imgs/heart.png" alt="" />
+            <h4>Heading</h4>
+            <p>
+              But also the leap into electronic typesetting, remaining
+              essentially unchanged. It was popularised in the 1960s with the
+              release of Letraset sheets containing Lorem Ipsum passages, and
+              more recently with desktop 
+            </p>
+          </div>
+
+          <div class="work-item">
+            <img src="./Assets/about-imgs/heart.png" alt="" />
+            <h4>Heading</h4>
+            <p>
+              But also the leap into electronic typesetting, remaining
+              essentially unchanged. It was popularised in the 1960s with the
+              release of Letraset sheets containing Lorem Ipsum passages, and
+              more recently with desktop 
+            </p>
+          </div>
+          <div class="work-item">
+            <img src="./Assets/about-imgs/heart.png" alt="" />
+            <h4>Heading</h4>
+            <p>
+              But also the leap into electronic typesetting, remaining
+              essentially unchanged. It was popularised in the 1960s with the
+              release of Letraset sheets containing Lorem Ipsum passages, and
+              more recently with desktop 
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- mentors section -->
+
+      <section class="mentors">
+        <h2 class="title">Our Mentors</h2>
+        <div class="mentor-Sliders">
+          <div class="mentor-item">
+            <img src="./Assets/about-imgs/mentor1.png" alt="" />
+
+            <h4>RAMESH BABU</h4>
+            <p>Retd. Navy Captain</p>
+          </div>
+
+          <div class="mentor-item">
+            <img src="./Assets/about-imgs/mentor2.png" alt="" />
+
+            <h4>C K RAMACHANDRAN</h4>
+            <p>Retd. IAS Officer</p>
+          </div>
+
+          <div class="mentor-item">
+            <img src="./Assets/about-imgs/mentor3.png" alt="" />
+
+            <h4>MOHANDAS P</h4>
+            <p>Historian</p>
+          </div>
+
+          <div class="mentor-item">
+            <img src="./Assets/about-imgs/mentor4.png" alt="" />
+
+            <h4>RAJEEV PALLIKKONAM</h4>
+            <p>Artist & Historian</p>
+          </div>
+
+          <div class="mentor-item">
+            <img src="./Assets/about-imgs/mentor2.png" alt="" />
+
+            <h4>C K RAMACHANDRAN</h4>
+            <p>Retd. IAS Officer</p>
           </div>
         </div>
       </section>
@@ -1019,45 +1147,6 @@
                 />
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- what we do -->
-
-      <section class="work-container">
-        <h2 class="title">What we do</h2>
-        <div class="work-items">
-          <div class="work-item">
-            <img src="./Assets/about-imgs/heart.png" alt="" />
-            <h4>Heading</h4>
-            <p>
-              But also the leap into electronic typesetting, remaining
-              essentially unchanged. It was popularised in the 1960s with the
-              release of Letraset sheets containing Lorem Ipsum passages, and
-              more recently with desktop 
-            </p>
-          </div>
-
-          <div class="work-item">
-            <img src="./Assets/about-imgs/heart.png" alt="" />
-            <h4>Heading</h4>
-            <p>
-              But also the leap into electronic typesetting, remaining
-              essentially unchanged. It was popularised in the 1960s with the
-              release of Letraset sheets containing Lorem Ipsum passages, and
-              more recently with desktop 
-            </p>
-          </div>
-          <div class="work-item">
-            <img src="./Assets/about-imgs/heart.png" alt="" />
-            <h4>Heading</h4>
-            <p>
-              But also the leap into electronic typesetting, remaining
-              essentially unchanged. It was popularised in the 1960s with the
-              release of Letraset sheets containing Lorem Ipsum passages, and
-              more recently with desktop 
-            </p>
           </div>
         </div>
       </section>
@@ -1140,102 +1229,6 @@
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry.
             </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- status 2 -->
-
-      <section>
-        <div class="sts1-container">
-          <div class="status1">
-            <div class="sts-count">
-              <img
-                src="./Assets/about-imgs/stsheart.png"
-                class="sts1-img"
-                alt=""
-              />
-              <div>
-                <div style="display: flex; align-items: center">
-                  <p class="about-sts-number">123</p>
-                  <p class="about-sts-val">k</p>
-                </div>
-
-                <p>Happy Travellers</p>
-              </div>
-            </div>
-
-            <div class="sts-count">
-              <img
-                src="./Assets/about-imgs/stsstar.png"
-                class="sts1-img"
-                alt=""
-              />
-              <div>
-                <div style="display: flex; align-items: center">
-                  <p class="about-sts-number">400</p>
-                  <p class="about-sts-val">+</p>
-                </div>
-                <p>Five Star Ratings</p>
-              </div>
-            </div>
-
-            <div class="sts-count">
-              <img
-                src="./Assets/about-imgs/stsdesti.png"
-                class="sts1-img"
-                alt=""
-              />
-              <div>
-                <div style="display: flex; align-items: center">
-                  <p class="about-sts-number">200</p>
-                  <p class="about-sts-val">+</p>
-                </div>
-                <p>Curated Toures</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- mentors section -->
-
-      <section class="mentors">
-        <h2 class="title">Our Mentors</h2>
-        <div class="mentor-Sliders">
-          <div class="mentor-item">
-            <img src="./Assets/about-imgs/mentor1.png" alt="" />
-
-            <h4>RAMESH BABU</h4>
-            <p>Retd. Navy Captain</p>
-          </div>
-
-          <div class="mentor-item">
-            <img src="./Assets/about-imgs/mentor2.png" alt="" />
-
-            <h4>C K RAMACHANDRAN</h4>
-            <p>Retd. IAS Officer</p>
-          </div>
-
-          <div class="mentor-item">
-            <img src="./Assets/about-imgs/mentor3.png" alt="" />
-
-            <h4>MOHANDAS P</h4>
-            <p>Historian</p>
-          </div>
-
-          <div class="mentor-item">
-            <img src="./Assets/about-imgs/mentor4.png" alt="" />
-
-            <h4>RAJEEV PALLIKKONAM</h4>
-            <p>Artist & Historian</p>
-          </div>
-
-          <div class="mentor-item">
-            <img src="./Assets/about-imgs/mentor2.png" alt="" />
-
-            <h4>C K RAMACHANDRAN</h4>
-            <p>Retd. IAS Officer</p>
           </div>
         </div>
       </section>
@@ -1336,58 +1329,95 @@
         </div>
       </section>
 
-      <!-- video section -->
-      <section>
-        <div class="video-container">
-          <!-- Left Section -->
-          <div class="video-left-section">
-            <h2>
-              Get the best <br />
-              Experiance
-            </h2>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard.
-            </p>
-          </div>
+      <!--sub brand slider  -->
 
-          <!-- Right Section -->
-          <div class="video-right-section">
-            <div class="video-wrapper">
-              <!-- Pause Image -->
-              <img
-                id="pauseImage"
-                src="./Assets/about-imgs/video.png"
-                alt="Paused Image"
-                class="pause-image"
-              />
-              <!-- Video Element -->
-              <video id="video" src="./Assets/about-imgs/video1.mp4"></video>
-              <div class="controls" onclick="togglePlayPause()">
-                <img src="./Assets/about-imgs/pause.png" alt="" />
+      <section class="brand-container">
+        <h2 class="title">Our Sub-Brands</h2>
+        <div class="team-items photos-Sliders">
+          <a href="#" class="brand-card">
+            <div class="brand-card-bg"></div>
+            <div class="brand-card-content">
+              <div>
+                <div class="brand-card-title">Brand-card Title</div>
+                <div class="brand-card-description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Earum, voluptas. Fuga, et! Adipisci suscipit eum illum
+                  dignissimos atque nihil recusandae, quod placeat soluta
+                  facilis sequi ad quasi et fugiat explicabo?
+                </div>
               </div>
+              <div class="view-more">View More</div>
             </div>
-          </div>
+          </a>
+
+          <a href="#" class="brand-card">
+            <div class="brand-card-bg"></div>
+            <div class="brand-card-content">
+              <div>
+                <div class="brand-card-title">Brand-card Title</div>
+                <div class="brand-card-description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Earum, voluptas. Fuga, et! Adipisci suscipit eum illum
+                  dignissimos atque nihil recusandae, quod placeat soluta
+                  facilis sequi ad quasi et fugiat explicabo?
+                </div>
+              </div>
+              <div class="view-more">View More</div>
+            </div>
+          </a>
+
+          <a href="#" class="brand-card">
+            <div class="brand-card-bg"></div>
+            <div class="brand-card-content">
+              <div>
+                <div class="brand-card-title">Brand-card Title</div>
+                <div class="brand-card-description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Earum, voluptas. Fuga, et! Adipisci suscipit eum illum
+                  dignissimos atque nihil recusandae, quod placeat soluta
+                  facilis sequi ad quasi et fugiat explicabo?
+                </div>
+              </div>
+              <div class="view-more">View More</div>
+            </div>
+          </a>
+
+          <a href="#" class="brand-card">
+            <div class="brand-card-bg"></div>
+            <div class="brand-card-content">
+              <div>
+                <div class="brand-card-title">Brand-card Title</div>
+                <div class="brand-card-description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Earum, voluptas. Fuga, et! Adipisci suscipit eum illum
+                  dignissimos atque nihil recusandae, quod placeat soluta
+                  facilis sequi ad quasi et fugiat explicabo?
+                </div>
+              </div>
+              <div class="view-more">View More</div>
+            </div>
+          </a>
+
+
+          <a href="#" class="brand-card">
+            <div class="brand-card-bg"></div>
+            <div class="brand-card-content">
+              <div>
+                <div class="brand-card-title">Brand-card Title</div>
+                <div class="brand-card-description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Earum, voluptas. Fuga, et! Adipisci suscipit eum illum
+                  dignissimos atque nihil recusandae, quod placeat soluta
+                  facilis sequi ad quasi et fugiat explicabo?
+                </div>
+              </div>
+              <div class="view-more">View More</div>
+            </div>
+          </a>
         </div>
       </section>
     </div>
 
-    <script>
-      const video = document.getElementById("video");
-      const pauseImage = document.getElementById("pauseImage");
-
-      function togglePlayPause() {
-        if (video.paused) {
-          video.style.display = "block";
-          pauseImage.style.display = "none";
-          video.play();
-        } else {
-          video.pause();
-          video.style.display = "block"; /* Ensure it remains visible */
-          pauseImage.style.display = "block";
-        }
-      }
-    </script>
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
