@@ -2075,9 +2075,24 @@ html {
   .effort-card {
     width: 80%;
 
-    flex-direction: column;
+   
   }
 
+
+  .package-imgs{
+    height: 400px;
+  }
+  .status1{
+    width: 85%;
+  }
+
+  .int-img{
+    height: 350px;
+  }
+
+  .monk-card .card-left {
+    padding: 25px;
+  }
   /* .effort-container::before {
     top: 50px;
   } */

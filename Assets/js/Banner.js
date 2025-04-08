@@ -160,13 +160,12 @@ updateHero();
 // JavaScript for scroll effect
 document.addEventListener("DOMContentLoaded", () => {
   const navbar = document.getElementById("navbar");
-
   window.addEventListener("scroll", () => {
     if (window.scrollY > 50) {
       // Adjust scroll threshold as needed
-      navbar.classList.add("scrolled");
+      navbar.classList.add("scrolled");      
     } else {
-      navbar.classList.remove("scrolled");
+      navbar.classList.remove("scrolled");   
     }
   });
 });
